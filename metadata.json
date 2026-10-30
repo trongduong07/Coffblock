@@ -1,0 +1,6 @@
+{
+  "name": "CoffBlock - Eco-friendly Coffee Odor Control & Live Pitch Q&A",
+  "description": "Sản phẩm kiểm soát mùi sinh thái từ bã cà phê tái chế và tinh bột sắn Việt Nam, tích hợp Live Anonymous Q&A Hub và chế độ thuyết trình song ngữ VI/EN.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
