@@ -1,21 +1,2036 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CoffBlock — Eco-friendly Odor Control | Pitch Deck & Live Q&A</title>
-    <meta name="description" content="Sản phẩm kiểm soát mùi sinh thái tái chế từ bã cà phê Việt Nam kết hợp tinh bột sắn thực vật. Tích hợp Live Anonymous Q&A Hub." />
-    <meta property="og:title" content="CoffBlock — Eco-friendly Odor Control | Pitch Deck & Live Q&A" />
-    <meta property="og:description" content="Sản phẩm kiểm soát mùi sinh thái tái chế từ bã cà phê Việt Nam kết hợp tinh bột sắn thực vật." />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CoffBlock — Eco-friendly Odor Control | Pitch Deck & Live Q&A</title>
+  <meta name="description" content="Sản phẩm kiểm soát mùi sinh thái tái chế từ bã cà phê Việt Nam kết hợp tinh bột sắn thực vật. Tích hợp Live Anonymous Q&A Hub.">
+  <meta property="og:title" content="CoffBlock — Eco-friendly Odor Control | Pitch Deck & Live Q&A">
+  <meta property="og:description" content="Sản phẩm kiểm soát mùi sinh thái từ bã cà phê tái chế và tinh bột sắn Việt Nam.">
+  <meta property="og:type" content="website">
 
+  <!-- Google Fonts: Plus Jakarta Sans & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            coffee: {
+              900: '#3D2314',
+              800: '#4A2E15',
+              700: '#5A381B',
+              100: '#F5EBE1',
+              50: '#FAF6F0'
+            },
+            eco: {
+              800: '#1e3d1a',
+              700: '#2D5A27',
+              600: '#4E7C59',
+              500: '#649b71',
+              100: '#e8f5e9',
+              light: '#86efac'
+            },
+            offwhite: '#FDFBF7',
+            canvasbg: '#F5F2EA',
+            darktext: '#222222'
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            serif: ['"Playfair Display"', 'Georgia', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Canvas Confetti CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+
+  <style>
+    body {
+      background-color: #FDFBF7;
+      color: #222222;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      overflow-x: hidden;
+    }
+    .font-serif-display {
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+    .text-balance {
+      text-wrap: balance;
+    }
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #FDFBF7;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #4A2E1533;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #4A2E1566;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col bg-[#FDFBF7] text-[#222222]">
+
+  <!-- STICKY NAVBAR -->
+  <header class="sticky top-0 z-40 bg-[#FDFBF7]/95 backdrop-blur-md border-b border-[#4A2E15]/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-3 group focus:outline-none" aria-label="CoffBlock Home">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#4A2E15] to-[#2D5A27] flex items-center justify-center text-white shadow-sm shadow-[#4A2E15]/20 group-hover:scale-105 transition-transform duration-200">
+          <svg viewBox="0 0 24 24" class="w-6 h-6 fill-none stroke-current stroke-2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+            <path d="M12 8c2-3 5-3 6-1s-1 5-4 4" class="stroke-[#86efac] fill-[#86efac]/40" stroke-width="1.5"></path>
+          </svg>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-xl font-extrabold tracking-tight text-[#3D2314]">
+            Coff<span class="text-[#2D5A27]">Block</span>
+          </span>
+          <span class="text-[10px] uppercase tracking-wider font-semibold text-[#4E7C59]">
+            Eco Deodorizer · VN
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden lg:flex items-center gap-6 text-sm font-medium text-[#4A2E15]/80">
+        <a href="#products" class="hover:text-[#2D5A27] transition-colors py-1" data-lang="nav_products">Sản phẩm</a>
+        <a href="#story" class="hover:text-[#2D5A27] transition-colors py-1" data-lang="nav_story">Bài toán & Bối cảnh</a>
+        <a href="#tech" class="hover:text-[#2D5A27] transition-colors py-1" data-lang="nav_tech">Công nghệ Vi xốp</a>
+        <a href="#process" class="hover:text-[#2D5A27] transition-colors py-1" data-lang="nav_process">Quy trình Tuần hoàn</a>
+        <a href="#market" class="hover:text-[#2D5A27] transition-colors py-1" data-lang="nav_market">Khách hàng & Chiến lược</a>
+        <a href="#qa" class="hover:text-[#2D5A27] transition-colors py-1 flex items-center gap-1.5 font-semibold text-[#2D5A27]">
+          <span class="w-2 h-2 rounded-full bg-[#2D5A27] inline-block animate-ping"></span>
+          <span data-lang="nav_qa">Live Q&A Trực tiếp</span>
+        </a>
+      </nav>
+
+      <!-- Language Switcher & Quick CTA -->
+      <div class="flex items-center gap-3 shrink-0">
+        <!-- Sticky [ VI | EN ] Switcher -->
+        <div class="flex items-center bg-[#4A2E15]/8 p-1 rounded-xl border border-[#4A2E15]/10" role="group">
+          <button id="btnLangVi" class="px-2.5 py-1 text-xs font-bold rounded-lg transition-all bg-[#3D2314] text-[#FDFBF7] shadow-sm cursor-pointer">
+            VI
+          </button>
+          <button id="btnLangEn" class="px-2.5 py-1 text-xs font-bold rounded-lg transition-all text-[#4A2E15]/70 hover:text-[#3D2314] cursor-pointer">
+            EN
+          </button>
+        </div>
+
+        <a href="#qa" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 text-xs font-semibold text-white bg-[#2D5A27] hover:bg-[#23471f] rounded-xl shadow-sm transition-all duration-200">
+          <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+          <span data-lang="nav_askButton">Đặt câu hỏi Live</span>
+        </a>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="mobileMenuBtn" class="lg:hidden p-2 text-[#4A2E15] hover:bg-[#4A2E15]/5 rounded-xl cursor-pointer" aria-label="Toggle Menu">
+          <svg class="w-6 h-6 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Menu Drawer -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-[#FDFBF7] border-b border-[#4A2E15]/10 px-4 py-4 space-y-2">
+      <a href="#products" class="mobile-nav-link block py-2 px-3 text-sm font-semibold text-[#4A2E15] hover:bg-[#4A2E15]/5 rounded-lg" data-lang="nav_products">Sản phẩm</a>
+      <a href="#story" class="mobile-nav-link block py-2 px-3 text-sm font-semibold text-[#4A2E15] hover:bg-[#4A2E15]/5 rounded-lg" data-lang="nav_story">Bài toán & Bối cảnh</a>
+      <a href="#tech" class="mobile-nav-link block py-2 px-3 text-sm font-semibold text-[#4A2E15] hover:bg-[#4A2E15]/5 rounded-lg" data-lang="nav_tech">Công nghệ Vi xốp</a>
+      <a href="#process" class="mobile-nav-link block py-2 px-3 text-sm font-semibold text-[#4A2E15] hover:bg-[#4A2E15]/5 rounded-lg" data-lang="nav_process">Quy trình Tuần hoàn</a>
+      <a href="#market" class="mobile-nav-link block py-2 px-3 text-sm font-semibold text-[#4A2E15] hover:bg-[#4A2E15]/5 rounded-lg" data-lang="nav_market">Khách hàng & Chiến lược</a>
+      <a href="#qa" class="mobile-nav-link block py-2 px-3 text-sm font-semibold text-[#2D5A27] hover:bg-[#2D5A27]/10 rounded-lg flex items-center justify-between">
+        <span data-lang="nav_qa">Live Q&A Trực tiếp</span>
+        <span class="text-[11px] bg-[#2D5A27] text-white px-2 py-0.5 rounded-full font-bold">Live</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="flex-1">
+
+    <!-- HERO SECTION -->
+    <section class="relative overflow-hidden pt-8 pb-16 md:pt-14 md:pb-24">
+      <div class="absolute top-0 right-1/4 w-96 h-96 bg-[#2D5A27]/5 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute bottom-10 left-10 w-96 h-96 bg-[#4A2E15]/5 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          
+          <div class="lg:col-span-7 flex flex-col items-start space-y-6">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#2D5A27]/10 border border-[#2D5A27]/20 text-[#2D5A27] text-xs font-bold tracking-wide">
+              <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              <span data-lang="hero_badge">Sản phẩm Đột phá Sinh thái 2026</span>
+            </div>
+
+            <h1 class="text-3xl sm:text-5xl lg:text-[3.5rem] font-extrabold text-[#3D2314] leading-[1.15] tracking-tight font-serif-display text-balance" data-lang="hero_headline">
+              Biến bã cà phê thành không gian sống xanh & sạch mùi
+            </h1>
+
+            <p class="text-base sm:text-lg text-[#4A2E15]/80 leading-relaxed max-w-2xl" data-lang="hero_subheadline">
+              Giải pháp kiểm soát mùi sinh thái tự nhiên cho tủ lạnh và tủ quần áo từ 100% bã cà phê tái chế tại Việt Nam kết hợp tinh bột sắn thực vật an toàn.
+            </p>
+
+            <div class="pt-2 flex flex-wrap items-center gap-4 w-full sm:w-auto">
+              <a href="#products" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3.5 text-sm font-bold text-white bg-[#3D2314] hover:bg-[#2A170C] rounded-xl shadow-md transition-all duration-200">
+                <span data-lang="hero_ctaPrimary">Khám phá Sản phẩm</span>
+                <svg class="w-4 h-4 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+
+              <a href="#qa" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3.5 text-sm font-bold text-[#2D5A27] bg-[#2D5A27]/10 hover:bg-[#2D5A27]/20 border border-[#2D5A27]/30 rounded-xl transition-all duration-200">
+                <svg class="w-4 h-4 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                <span data-lang="hero_ctaSecondary">Gửi câu hỏi Q&A Live</span>
+              </a>
+            </div>
+
+            <div class="pt-4 flex items-center gap-6 text-xs text-[#4A2E15]/70 border-t border-[#4A2E15]/10 w-full">
+              <div class="flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-[#2D5A27]"></span>
+                <span data-lang="hero_safe">An toàn thực phẩm</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-[#2D5A27]"></span>
+                <span data-lang="hero_circular">Kinh tế tuần hoàn</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-[#2D5A27]"></span>
+                <span data-lang="hero_duration">Tác dụng 60 ngày</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Image -->
+          <div class="lg:col-span-5 relative">
+            <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-[#4A2E15]/15 bg-[#EFECE6] group">
+              <img src="./assets/images/hero_coffblock_eco_1793366684023.jpg" alt="CoffBlock Compressed Coffee Deodorizer Blocks" class="w-full h-auto object-cover group-hover:scale-102 transition-transform duration-500" onerror="if(!this.dataset.tried){this.dataset.tried='1';this.src='./src/assets/images/hero_coffblock_eco_1793366684023.jpg';}else{this.onerror=null;this.src='https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=800&auto=format&fit=crop';}">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none"></div>
+              <div class="absolute bottom-4 left-4 right-4 text-white text-xs font-medium flex items-center justify-between">
+                <span class="bg-black/60 backdrop-blur-md px-3 py-1 rounded-lg">100% Recycled Vietnam Coffee Grounds</span>
+                <span class="bg-[#2D5A27]/85 backdrop-blur-md px-3 py-1 rounded-lg">Cassava Starch Binder</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 4-Stat Strip -->
+        <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 p-6 rounded-2xl bg-white/80 border border-[#4A2E15]/10 shadow-sm backdrop-blur-sm">
+          <div class="flex flex-col items-center text-center p-3">
+            <span class="text-2xl sm:text-3xl font-extrabold text-[#2D5A27] font-mono tabular-nums" data-lang="hero_stat1">100% Sinh học</span>
+            <span class="text-xs text-[#4A2E15]/75 mt-1 font-medium" data-lang="hero_stat1Desc">Tái chế bã cà phê & sắn</span>
+          </div>
+          <div class="flex flex-col items-center text-center p-3 border-l border-[#4A2E15]/10">
+            <span class="text-2xl sm:text-3xl font-extrabold text-[#3D2314] font-mono tabular-nums" data-lang="hero_stat2">0% Hương liệu</span>
+            <span class="text-xs text-[#4A2E15]/75 mt-1 font-medium" data-lang="hero_stat2Desc">Không hoá chất nhân tạo</span>
+          </div>
+          <div class="flex flex-col items-center text-center p-3 border-l border-[#4A2E15]/10">
+            <span class="text-2xl sm:text-3xl font-extrabold text-[#2D5A27] font-mono tabular-nums" data-lang="hero_stat3">60 Ngày</span>
+            <span class="text-xs text-[#4A2E15]/75 mt-1 font-medium" data-lang="hero_stat3Desc">Hiệu quả hút mùi bền bỉ</span>
+          </div>
+          <div class="flex flex-col items-center text-center p-3 border-l border-[#4A2E15]/10">
+            <span class="text-2xl sm:text-3xl font-extrabold text-[#3D2314] font-mono tabular-nums" data-lang="hero_stat4">1.000.000+ Tấn</span>
+            <span class="text-xs text-[#4A2E15]/75 mt-1 font-medium" data-lang="hero_stat4Desc">Tiềm năng bã cà phê VN</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: PROBLEM & STORY -->
+    <section id="story" class="py-20 bg-[#F5F2EA] border-y border-[#4A2E15]/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto space-y-3">
+          <span class="text-xs uppercase font-extrabold tracking-widest text-[#2D5A27]" data-lang="story_tag">Thực trạng & Bối cảnh</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-[#3D2314] font-serif-display tracking-tight text-balance" data-lang="story_title">
+            Từ rác thải chôn lấp đến không gian sống trong lành
+          </h2>
+          <p class="text-base text-[#4A2E15]/80" data-lang="story_subtitle">
+            Kết nối hai bài toán nhức nhối quen thuộc của đời sống thành một chu trình tuần hoàn giá trị cao.
+          </p>
+        </div>
+
+        <div class="mt-14 grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Problem 1 -->
+          <div class="p-8 rounded-2xl bg-white border border-[#4A2E15]/10 shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-[#4A2E15]/10 flex items-center justify-center text-[#3D2314] mb-6 font-bold text-xl">☕</div>
+              <h3 class="text-xl font-bold text-[#3D2314] mb-3" data-lang="story_coffeeTitle">Văn hóa cà phê Việt Nam & Áp lực rác thải</h3>
+              <p class="text-sm text-[#4A2E15]/80 leading-relaxed" data-lang="story_coffeeDesc">
+                Cà phê là thức uống gắn liền với nhịp sống của hàng chục triệu người Việt Nam mỗi sáng. Tuy nhiên, hàng ngàn tấn bã cà phê qua sử dụng bị vứt thẳng ra bãi rác sinh hoạt mỗi ngày, phân hủy yếm khí sinh khí methane (CH₄) gây biến đổi khí hậu.
+              </p>
+            </div>
+            <div class="mt-6 pt-5 border-t border-[#4A2E15]/10 grid grid-cols-2 gap-4 text-xs">
+              <div class="p-3 rounded-xl bg-[#FDFBF7] border border-[#4A2E15]/10">
+                <span class="text-[#3D2314] font-bold block text-sm font-mono">1.000.000+ Tấn</span>
+                <span class="text-[#4A2E15]/70 text-[11px]" data-lang="story_wasteYearly">Bã cà phê xả bãi rác mỗi năm</span>
+              </div>
+              <div class="p-3 rounded-xl bg-[#FDFBF7] border border-[#4A2E15]/10">
+                <span class="text-rose-600 font-bold block text-sm font-mono">CH₄ (Methane)</span>
+                <span class="text-[#4A2E15]/70 text-[11px]" data-lang="story_methaneDesc">Khí nhà kính hại gấp 28x CO₂</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Problem 2 -->
+          <div class="p-8 rounded-2xl bg-white border border-[#4A2E15]/10 shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-[#2D5A27]/10 flex items-center justify-center text-[#2D5A27] mb-6 font-bold text-xl">🏠</div>
+              <h3 class="text-xl font-bold text-[#3D2314] mb-3" data-lang="story_houseTitle">Nỗi ám ảnh mùi hôi trong từng căn nhà</h3>
+              <p class="text-sm text-[#4A2E15]/80 leading-relaxed" data-lang="story_houseDesc">
+                Tủ lạnh gia đình thường xuyên bị ám mùi chéo giữa hải sản tanh, hành tỏi và đồ ăn thừa. Tủ quần áo bị nồm ẩm, mốc meo trong mùa mưa gió kéo dài. Các căn phòng trọ sinh viên chật hẹp thiếu thông gió khiến không khí ngột ngạt.
+              </p>
+            </div>
+            <div class="mt-6 pt-5 border-t border-[#4A2E15]/10 grid grid-cols-2 gap-4 text-xs">
+              <div class="p-3 rounded-xl bg-[#FDFBF7] border border-[#4A2E15]/10">
+                <span class="text-[#2D5A27] font-bold block text-sm font-mono" data-lang="story_fridgeCloset">Tủ lạnh & Tủ áo</span>
+                <span class="text-[#4A2E15]/70 text-[11px]" data-lang="story_fridgeDesc">Ám mùi tanh & nồm ẩm mốc</span>
+              </div>
+              <div class="p-3 rounded-xl bg-[#FDFBF7] border border-[#4A2E15]/10">
+                <span class="text-amber-700 font-bold block text-sm font-mono" data-lang="story_dorm">Phòng trọ hẹp</span>
+                <span class="text-[#4A2E15]/70 text-[11px]" data-lang="story_dormDesc">Thiếu thông gió tự nhiên</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Comparative Analysis Table -->
+        <div class="mt-14 p-6 sm:p-8 rounded-2xl bg-white border border-[#4A2E15]/15 shadow-sm">
+          <div class="mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <div>
+              <span class="text-xs font-extrabold uppercase tracking-wider text-[#2D5A27]" data-lang="story_compTag">Phân tích đối sánh</span>
+              <h3 class="text-xl sm:text-2xl font-bold text-[#3D2314]" data-lang="story_compTitle">So sánh giải pháp: CoffBlock vs Sáp thơm nhân tạo</h3>
+            </div>
+            <span class="text-xs text-[#4A2E15]/60" data-lang="story_compSubtitle">Giải quyết tận gốc rễ vấn đề</span>
+          </div>
+
+          <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse">
+              <thead>
+                <tr class="border-b border-[#4A2E15]/15 text-xs text-[#4A2E15]/70">
+                  <th class="py-3 px-4 font-bold w-1/4" data-lang="story_thCriteria">Tiêu chí</th>
+                  <th class="py-3 px-4 font-bold w-3/8 text-[#2D5A27] bg-[#2D5A27]/5 rounded-t-xl" data-lang="story_thCoffBlock">CoffBlock (Sinh thái)</th>
+                  <th class="py-3 px-4 font-bold w-3/8 text-rose-700" data-lang="story_thChemical">Sáp thơm / Xịt phòng hoá học</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-[#4A2E15]/10 text-xs">
+                <tr>
+                  <td class="py-4 px-4 font-bold text-[#3D2314]" data-lang="story_crit1">Cơ chế xử lý</td>
+                  <td class="py-4 px-4 bg-[#2D5A27]/5 text-[#2D5A27] font-medium" data-lang="story_coff1">✓ Hấp phụ vật lý vi xốp, triệt tiêu phân tử mùi tận gốc</td>
+                  <td class="py-4 px-4 text-[#4A2E15]/75" data-lang="story_chem1">✗ Tỏa hương nồng để át mùi, không xử lý phân tử hôi</td>
+                </tr>
+                <tr>
+                  <td class="py-4 px-4 font-bold text-[#3D2314]" data-lang="story_crit2">Thành phần & Độ an toàn</td>
+                  <td class="py-4 px-4 bg-[#2D5A27]/5 text-[#2D5A27] font-medium" data-lang="story_coff2">✓ 100% Bã cà phê sạch & Tinh bột sắn thực vật, an toàn cạnh thực phẩm</td>
+                  <td class="py-4 px-4 text-[#4A2E15]/75" data-lang="story_chem2">✗ Hương liệu tổng hợp nhân tạo, VOCs, tiềm ẩn kích ứng hô hấp</td>
+                </tr>
+                <tr>
+                  <td class="py-4 px-4 font-bold text-[#3D2314]" data-lang="story_crit3">Vòng đời sau sử dụng</td>
+                  <td class="py-4 px-4 bg-[#2D5A27]/5 text-[#2D5A27] font-medium rounded-b-xl" data-lang="story_coff3">✓ 100% Phân hủy sinh học, bẻ vụn làm phân compost cho cây cảnh</td>
+                  <td class="py-4 px-4 text-[#4A2E15]/75" data-lang="story_chem3">✗ Hộp nhựa sử dụng một lần và cặn sáp thải ra môi trường</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: TECHNOLOGY & SCIENCE -->
+    <section id="tech" class="py-20 bg-[#FDFBF7]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto space-y-3">
+          <span class="text-xs uppercase font-extrabold tracking-widest text-[#2D5A27]" data-lang="tech_tag">Cơ chế & Công nghệ</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-[#3D2314] font-serif-display tracking-tight text-balance" data-lang="tech_title">
+            Khoa học đằng sau cấu trúc vi xốp tự nhiên của CoffBlock
+          </h2>
+          <p class="text-base text-[#4A2E15]/80" data-lang="tech_subtitle">
+            Tận dụng cấu trúc vật lý mao dẫn siêu nhỏ của bã cà phê kết hợp tinh bột sắn biến tính làm chất kết dính an toàn.
+          </p>
+        </div>
+
+        <div class="mt-14 grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+          <!-- Card 1: Porous Matrix -->
+          <div class="lg:col-span-7 p-8 rounded-2xl bg-gradient-to-br from-[#3D2314] to-[#2D5A27] text-white shadow-lg flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-[#86efac] text-xs font-bold">
+                <span>🔬</span>
+                <span data-lang="tech_microscope">Vật lý Mao dẫn Vi mô</span>
+              </div>
+              <h3 class="text-2xl font-bold font-serif-display text-[#FDFBF7]" data-lang="tech_matrixTitle">
+                Mạng lưới mao quản vi xốp (Porous Matrix)
+              </h3>
+              <p class="text-sm text-white/85 leading-relaxed" data-lang="tech_matrixDesc">
+                Sau quá trình xử lý nhiệt đối lưu, bã cà phê sở hữu diện tích bề mặt tiếp xúc lên đến 15-20 m²/g. Mạng lưới lỗ xốp li ti hoạt động như bẫy vật lý hút giữ các hợp chất dễ bay hơi như Trimethylamine (mùi tanh cá) và Dimethyl disulfide (mùi hành tỏi nồng).
+              </p>
+
+              <div class="pt-4 p-5 rounded-xl bg-black/25 border border-white/10 space-y-3">
+                <div class="flex items-center justify-between text-xs text-white/80 pb-2 border-b border-white/10">
+                  <span class="font-bold" data-lang="tech_trapTitle">Cơ chế bẫy phân tử mùi:</span>
+                  <span class="text-[#86efac] text-[11px] font-mono">15 - 20 m²/g Surface Area</span>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                  <div class="p-3 rounded-lg bg-white/5 border border-white/10">
+                    <span class="text-[#86efac] font-bold block mb-1">🐟 Trimethylamine (TMA)</span>
+                    <p class="text-[11px] text-white/70" data-lang="tech_tmaDesc">Mùi tanh cá & hải sản bị giữ chặt trong lỗ rỗng trung bình (mesopores).</p>
+                  </div>
+                  <div class="p-3 rounded-lg bg-white/5 border border-white/10">
+                    <span class="text-[#fde047] font-bold block mb-1">🧄 Dimethyl Disulfide (DMDS)</span>
+                    <p class="text-[11px] text-white/70" data-lang="tech_dmdsDesc">Hợp chất sulfur từ hành tỏi nồng bị trung hòa bề mặt mao dẫn.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-white/15 grid grid-cols-3 gap-2 text-center">
+              <div>
+                <span class="text-xl sm:text-2xl font-black font-mono text-[#86efac]">15 - 20 m²/g</span>
+                <span class="block text-[10px] text-white/70 uppercase mt-0.5" data-lang="tech_spec1">Diện tích bề mặt</span>
+              </div>
+              <div class="border-l border-white/15">
+                <span class="text-xl sm:text-2xl font-black font-mono text-white">&lt; 8%</span>
+                <span class="block text-[10px] text-white/70 uppercase mt-0.5" data-lang="tech_spec2">Độ ẩm sản phẩm</span>
+              </div>
+              <div class="border-l border-white/15">
+                <span class="text-xl sm:text-2xl font-black font-mono text-[#86efac]">100%</span>
+                <span class="block text-[10px] text-white/70 uppercase mt-0.5" data-lang="tech_spec3">Ủ Compost đất</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Cassava Binder -->
+          <div class="lg:col-span-5 p-8 rounded-2xl bg-white border border-[#4A2E15]/15 shadow-sm flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#2D5A27]/10 text-[#2D5A27] text-xs font-bold">
+                <span>🛡️</span>
+                <span data-lang="tech_binderBadge">Chất kết dính sinh học 100%</span>
+              </div>
+              <h3 class="text-2xl font-bold text-[#3D2314]" data-lang="tech_binderTitle">
+                Chất kết dính tinh bột sắn thực vật
+              </h3>
+              <p class="text-sm text-[#4A2E15]/80 leading-relaxed" data-lang="tech_binderDesc">
+                Thay vì dùng keo hóa học, CoffBlock sử dụng tinh bột sắn (cassava starch) quen thuộc của nông nghiệp Việt Nam, giúp khối nén có độ bền cơ học cao, không bị rã vỡ trong môi trường độ ẩm 85% của tủ lạnh, đồng thời đạt chuẩn an toàn khi tiếp xúc gần thực phẩm.
+              </p>
+
+              <div class="space-y-3 pt-2 text-xs text-[#3D2314]">
+                <div class="flex items-start gap-3 p-3 rounded-xl bg-[#F5F2EA]">
+                  <span class="text-[#2D5A27] font-bold">✓</span>
+                  <div>
+                    <span class="font-bold block text-[#2D5A27]" data-lang="tech_feature1Title">Chịu ẩm vượt trội 85%</span>
+                    <span class="text-[#4A2E15]/75" data-lang="tech_feature1Desc">Không nhão, không bở rã khi đặt trực tiếp cạnh đá lạnh hay ngăn đông.</span>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3 p-3 rounded-xl bg-[#F5F2EA]">
+                  <span class="text-[#2D5A27] font-bold">✓</span>
+                  <div>
+                    <span class="font-bold block text-[#2D5A27]" data-lang="tech_feature2Title">An toàn cạnh thực phẩm tươi</span>
+                    <span class="text-[#4A2E15]/75" data-lang="tech_feature2Desc">100% tinh bột củ sắn nông nghiệp Việt Nam, không chứa formaldehyd hay keo công nghiệp.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-[#4A2E15]/10 flex items-center justify-between text-xs text-[#4A2E15]/70">
+              <span class="font-medium" data-lang="tech_rdTeam">Công thức phát triển bởi R&D Team</span>
+              <span class="font-mono font-bold text-[#2D5A27]">VN Patent Pending</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: PRODUCTS & PRICING -->
+    <section id="products" class="py-20 bg-[#F5F2EA] border-t border-[#4A2E15]/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto space-y-3">
+          <span class="text-xs uppercase font-extrabold tracking-widest text-[#2D5A27]" data-lang="prod_tag">Dòng sản phẩm & Giá bán</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-[#3D2314] font-serif-display tracking-tight" data-lang="prod_title">
+            Giải pháp sinh thái cho từng không gian sống
+          </h2>
+          <p class="text-base text-[#4A2E15]/80" data-lang="prod_subtitle">
+            Định giá minh bạch, tiết kiệm và thân thiện với ngân sách gia đình cũng như sinh viên.
+          </p>
+        </div>
+
+        <!-- 3 Product Cards -->
+        <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+          
+          <!-- Product 1: Refrigerator Set -->
+          <div class="rounded-2xl bg-white border border-[#4A2E15]/15 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group">
+            <div class="relative h-56 bg-[#FAF6F0] overflow-hidden">
+              <img src="./assets/images/product_refrigerator_set_1793366684956.jpg" alt="CoffBlock Refrigerator Set" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="if(!this.dataset.tried){this.dataset.tried='1';this.src='./src/assets/images/product_refrigerator_set_1793366684956.jpg';}else{this.onerror=null;this.src='https://images.unsplash.com/photo-1584269600464-37b1b58a9fe7?q=80&w=600&auto=format&fit=crop';}">
+              <div class="absolute top-3 left-3 bg-[#3D2314] text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-sm" data-lang="prod_set1Badge">Bán chạy nhất</div>
+              <div class="absolute bottom-3 right-3 bg-white/90 backdrop-blur-sm text-[#3D2314] text-xs font-semibold px-2.5 py-1 rounded-lg" data-lang="prod_set1Spec">2 Khối nén đúc nguyên khối</div>
+            </div>
+
+            <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="text-xl font-bold text-[#3D2314]" data-lang="prod_set1Name">Set Tủ Lạnh (Refrigerator Set)</h3>
+                <p class="text-xs text-[#4A2E15]/75 mt-2 line-clamp-3 leading-relaxed" data-lang="prod_set1Desc">
+                  Khối nén đúc từ bã cà phê tinh khiết kết dính tinh bột sắn. Đặt trực tiếp lên khay tủ lạnh, ngăn mát hoặc ngăn đông để triệt tiêu mùi tanh cá, hành tỏi, sầu riêng.
+                </p>
+
+                <div class="mt-5 pb-5 border-b border-[#4A2E15]/10 flex items-baseline gap-2">
+                  <span class="text-3xl font-extrabold text-[#3D2314] font-mono tabular-nums">79.000</span>
+                  <span class="text-xs font-bold text-[#4A2E15]/70" data-lang="prod_currency">VNĐ</span>
+                  <span class="text-xs text-[#2D5A27] font-semibold ml-auto">(~$3.2 USD)</span>
+                </div>
+
+                <ul class="mt-5 space-y-2.5 text-xs text-[#4A2E15]/85">
+                  <li class="flex items-start gap-2.5"><span class="text-[#2D5A27] font-bold">✓</span><span data-lang="prod_set1F1">2 khối nén đúc chuyên dụng</span></li>
+                  <li class="flex items-start gap-2.5"><span class="text-[#2D5A27] font-bold">✓</span><span data-lang="prod_set1F2">Hiệu quả khử mùi 60 ngày liên tục</span></li>
+                  <li class="flex items-start gap-2.5"><span class="text-[#2D5A27] font-bold">✓</span><span data-lang="prod_set1F3">100% an toàn cạnh thực phẩm tươi sống</span></li>
+                  <li class="flex items-start gap-2.5"><span class="text-[#2D5A27] font-bold">✓</span><span data-lang="prod_set1F4">Dễ dàng ủ đất bón cây sau dùng</span></li>
+                </ul>
+              </div>
+
+              <div class="pt-6 mt-6 border-t border-[#4A2E15]/10">
+                <button onclick="triggerPreorderToast('Set Tủ Lạnh (79.000 VNĐ)')" class="w-full py-2.5 px-4 rounded-xl text-xs font-bold text-[#3D2314] bg-[#F5F2EA] hover:bg-[#3D2314] hover:text-white transition-colors duration-200 cursor-pointer flex items-center justify-center gap-2">
+                  <span>🛍️</span>
+                  <span data-lang="prod_orderBtn">Đặt trải nghiệm thử</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 2: Wardrobe Set -->
+          <div class="rounded-2xl bg-white border border-[#4A2E15]/15 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group">
+            <div class="relative h-56 bg-[#FAF6F0] overflow-hidden">
+              <img src="./assets/images/product_wardrobe_pouch_1793366685163.jpg" alt="CoffBlock Wardrobe Canvas Pouch" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="if(!this.dataset.tried){this.dataset.tried='1';this.src='./src/assets/images/product_wardrobe_pouch_1793366685163.jpg';}else{this.onerror=null;this.src='https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=600&auto=format&fit=crop';}">
+              <div class="absolute top-3 left-3 bg-[#4E7C59] text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-sm" data-lang="prod_set2Badge">Được yêu thích</div>
+              <div class="absolute bottom-3 right-3 bg-white/90 backdrop-blur-sm text-[#3D2314] text-xs font-semibold px-2.5 py-1 rounded-lg" data-lang="prod_set2Spec">3 Túi vải canvas treo chống ẩm mốc</div>
+            </div>
+
+            <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="text-xl font-bold text-[#3D2314]" data-lang="prod_set2Name">Set Tủ Áo & Phòng Tắm (Wardrobe Set)</h3>
+                <p class="text-xs text-[#4A2E15]/75 mt-2 line-clamp-3 leading-relaxed" data-lang="prod_set2Desc">
+                  Bã cà phê sấy hạt trong túi canvas dệt tự nhiên có dây treo tiện lợi. Hút ẩm mùa nồm, ngăn nấm mốc tủ quần áo và khử mùi hôi giày dép.
+                </p>
+
+                <div class="mt-5 pb-5 border-b border-[#4A2E15]/10 flex items-baseline gap-2">
+                  <span class="text-3xl font-extrabold text-[#3D2314] font-mono tabular-nums">99.000</span>
+                  <span class="text-xs font-bold text-[#4A2E15]/70" data-lang="prod_currency">VNĐ</span>
+                  <span class="text-xs text-[#2D5A27] font-semibold ml-auto">(~$4.0 USD)</span>
+                </div>
+
+                <ul class="mt-5 space-y-2.5 text-xs text-[#4A2E15]/85">
+                  <li class="flex items-start gap-2.5"><span class="text-[#2D5A27] font-bold">✓</span><span data-lang="prod_set2F1">3 túi canvas dệt thủ công có móc treo</span></li>
+                  <li class="flex items-start gap-2.5"><span class="text-[#2D5A27] font-bold">✓</span><span data-lang="prod_set2F2">Chống ẩm mốc và hút mùi ẩm mốc</span></li>
+                  <li class="flex items-start gap-2.5"><span class="text-[#2D5A27] font-bold">✓</span><span data-lang="prod_set2F3">Thích hợp tủ quần áo, phòng tắm, xe hơi</span></li>
+                  <li class="flex items-start gap-2.5"><span class="text-[#2D5A27] font-bold">✓</span><span data-lang="prod_set2F4">Vải canvas bền đẹp tái sử dụng</span></li>
+                </ul>
+              </div>
+
+              <div class="pt-6 mt-6 border-t border-[#4A2E15]/10">
+                <button onclick="triggerPreorderToast('Set Tủ Áo & Phòng Tắm (99.000 VNĐ)')" class="w-full py-2.5 px-4 rounded-xl text-xs font-bold text-[#3D2314] bg-[#F5F2EA] hover:bg-[#3D2314] hover:text-white transition-colors duration-200 cursor-pointer flex items-center justify-center gap-2">
+                  <span>🛍️</span>
+                  <span data-lang="prod_orderBtn">Đặt trải nghiệm thử</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 3: Family Combo -->
+          <div class="rounded-2xl bg-white border-2 border-[#2D5A27] overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col relative group">
+            <div class="bg-[#2D5A27] text-white text-[11px] font-bold py-1 text-center tracking-wide uppercase" data-lang="prod_set3Badge">Tiết kiệm nhất</div>
+
+            <div class="relative h-56 bg-[#FAF6F0] overflow-hidden">
+              <img src="./assets/images/product_family_combo_1793366685174.jpg" alt="CoffBlock Family Combo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="if(!this.dataset.tried){this.dataset.tried='1';this.src='./src/assets/images/product_family_combo_1793366685174.jpg';}else{this.onerror=null;this.src='https://images.unsplash.com/photo-1549465220-1a8b9238cd48?q=80&w=600&auto=format&fit=crop';}">
+              <div class="absolute bottom-3 right-3 bg-white/95 backdrop-blur-sm text-[#2D5A27] text-xs font-bold px-2.5 py-1 rounded-lg" data-lang="prod_set3Spec">Trọn bộ 2 Khối nén + 3 Túi canvas</div>
+            </div>
+
+            <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="text-xl font-bold text-[#3D2314]" data-lang="prod_set3Name">Family Combo (Bộ Toàn Diện)</h3>
+                <p class="text-xs text-[#4A2E15]/75 mt-2 line-clamp-3 leading-relaxed" data-lang="prod_set3Desc">
+                  Giải pháp toàn diện cho toàn bộ ngôi nhà: 2 khối nén khử mùi tủ lạnh và 3 túi canvas treo tủ quần áo, phòng tắm. Đóng gói trong hộp quà kraft sinh thái.
+                </p>
+
+                <div class="mt-5 pb-5 border-b border-[#4A2E15]/10 flex items-baseline gap-2">
+                  <span class="text-3xl font-extrabold text-[#2D5A27] font-mono tabular-nums">159.000</span>
+                  <span class="text-xs font-bold text-[#4A2E15]/70" data-lang="prod_currency">VNĐ</span>
+                  <span class="text-xs text-[#2D5A27] font-semibold ml-auto">(~$6.5 USD)</span>
+                </div>
+
+                <ul class="mt-5 space-y-2.5 text-xs text-[#4A2E15]/85">
+                  <li class="flex items-start gap-2.5"><span class="text-[#2D5A27] font-bold">✓</span><span data-lang="prod_set3F1">Tiết kiệm ngay 19.000 VNĐ so với mua lẻ</span></li>
+                  <li class="flex items-start gap-2.5"><span class="text-[#2D5A27] font-bold">✓</span><span data-lang="prod_set3F2">Đầy đủ cho bếp, tủ lạnh, tủ áo và phòng tắm</span></li>
+                  <li class="flex items-start gap-2.5"><span class="text-[#2D5A27] font-bold">✓</span><span data-lang="prod_set3F3">Hộp quà Kraft sang trọng, thân thiện môi trường</span></li>
+                  <li class="flex items-start gap-2.5"><span class="text-[#2D5A27] font-bold">✓</span><span data-lang="prod_set3F4">Tặng kèm sổ tay hướng dẫn ủ phân compost</span></li>
+                </ul>
+              </div>
+
+              <div class="pt-6 mt-6 border-t border-[#4A2E15]/10">
+                <button onclick="triggerPreorderToast('Family Combo (159.000 VNĐ)')" class="w-full py-3 px-4 rounded-xl text-xs font-bold text-white bg-[#2D5A27] hover:bg-[#23471f] shadow-md transition-all duration-200 cursor-pointer flex items-center justify-center gap-2 hover:-translate-y-0.5">
+                  <span>🛍️</span>
+                  <span data-lang="prod_orderFamily">Đặt Combo Toàn Diện</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Launch Promotions Banner -->
+        <div class="mt-14 p-6 sm:p-8 rounded-2xl bg-white border border-[#4A2E15]/15">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+            <div class="space-y-1">
+              <div class="inline-flex items-center gap-2 text-xs font-bold text-[#2D5A27] uppercase tracking-wider">
+                <span>🎁</span>
+                <span data-lang="promo_title">Ưu đãi đặc biệt dịp ra mắt</span>
+              </div>
+              <h4 class="text-lg font-bold text-[#3D2314]" data-lang="promo_subtitle">Chương trình trợ giá kích cầu xanh</h4>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 flex-1 max-w-2xl">
+              <div class="p-4 rounded-xl bg-[#FDFBF7] border border-[#4A2E15]/10 text-xs">
+                <span class="font-bold text-[#2D5A27] block mb-1">🎁 Buy 2 Get 1</span>
+                <p class="text-[#4A2E15]/80" data-lang="promo_1">Mua 2 set tủ lạnh nhận ngay 1 túi treo canvas.</p>
+              </div>
+
+              <div class="p-4 rounded-xl bg-[#FDFBF7] border border-[#4A2E15]/10 text-xs">
+                <span class="font-bold text-[#3D2314] block mb-1">🌱 Bring Grounds, Get Gift</span>
+                <p class="text-[#4A2E15]/80" data-lang="promo_2">Mang bã cà phê đã sấy khô đến sự kiện để đổi 1 khối CoffBlock miễn phí.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: CIRCULAR PROCESS -->
+    <section id="process" class="py-20 bg-[#FDFBF7] border-t border-[#4A2E15]/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto space-y-3">
+          <span class="text-xs uppercase font-extrabold tracking-widest text-[#2D5A27]" data-lang="proc_tag">Quy trình Sản xuất Tuần hoàn</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-[#3D2314] font-serif-display tracking-tight" data-lang="proc_title">
+            Hành trình khép kín: Từ tách cà phê đến hạt giống mới
+          </h2>
+          <p class="text-base text-[#4A2E15]/80" data-lang="proc_subtitle">
+            Quy trình 4 bước tinh gọn đảm bảo vệ sinh, chất lượng ổn định và không phát sinh rác thải.
+          </p>
+        </div>
+
+        <div class="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="p-6 rounded-2xl bg-white border border-[#4A2E15]/15 shadow-sm space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="w-10 h-10 rounded-xl bg-[#4A2E15]/10 flex items-center justify-center text-lg">☕</span>
+              <span class="text-xs font-mono font-bold text-[#2D5A27]">PHASE 01</span>
+            </div>
+            <h4 class="text-base font-bold text-[#3D2314]" data-lang="proc_s1Title">1. Thu gom bã cà phê</h4>
+            <p class="text-xs text-[#4A2E15]/80 leading-relaxed" data-lang="proc_s1Desc">
+              Hợp tác thu gom bã cà phê sạch hàng ngày từ các quán cà phê hè phố và chuỗi đối tác, tạo nguồn nguyên liệu ổn định và giảm tải bãi rác.
+            </p>
+            <div class="pt-2 text-[11px] font-bold text-[#2D5A27]" data-lang="proc_s1Stat">Giảm 100% rác chôn lấp</div>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-white border border-[#4A2E15]/15 shadow-sm space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="w-10 h-10 rounded-xl bg-[#2D5A27]/10 flex items-center justify-center text-lg">🔥</span>
+              <span class="text-xs font-mono font-bold text-[#2D5A27]">PHASE 02</span>
+            </div>
+            <h4 class="text-base font-bold text-[#3D2314]" data-lang="proc_s2Title">2. Sấy khô & Phối trộn</h4>
+            <p class="text-xs text-[#4A2E15]/80 leading-relaxed" data-lang="proc_s2Desc">
+              Sấy đối lưu nhiệt độ kiểm soát để khử ẩm dưới 8% và loại bỏ vi sinh, sau đó phối trộn với tinh bột sắn biến tính tự nhiên làm chất kết dính sinh học.
+            </p>
+            <div class="pt-2 text-[11px] font-bold text-[#2D5A27]" data-lang="proc_s2Stat">Độ ẩm &lt; 8% chống mốc</div>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-white border border-[#4A2E15]/15 shadow-sm space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="w-10 h-10 rounded-xl bg-[#4A2E15]/10 flex items-center justify-center text-lg">📦</span>
+              <span class="text-xs font-mono font-bold text-[#2D5A27]">PHASE 03</span>
+            </div>
+            <h4 class="text-base font-bold text-[#3D2314]" data-lang="proc_s3Title">3. Đúc khuôn & Đóng gói</h4>
+            <p class="text-xs text-[#4A2E15]/80 leading-relaxed" data-lang="proc_s3Desc">
+              Ép thủy lực thành các khối nén hình học hoặc đóng gói vào túi vải canvas dệt tự nhiên, kiểm định độ an toàn thực phẩm trước khi xuất xưởng.
+            </p>
+            <div class="pt-2 text-[11px] font-bold text-[#2D5A27]" data-lang="proc_s3Stat">Chuẩn an toàn thực phẩm</div>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-white border border-[#4A2E15]/15 shadow-sm space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="w-10 h-10 rounded-xl bg-[#2D5A27]/10 flex items-center justify-center text-lg">🌱</span>
+              <span class="text-xs font-mono font-bold text-[#2D5A27]">PHASE 04</span>
+            </div>
+            <h4 class="text-base font-bold text-[#3D2314]" data-lang="proc_s4Title">4. Hoàn nguyên Compost</h4>
+            <p class="text-xs text-[#4A2E15]/80 leading-relaxed" data-lang="proc_s4Desc">
+              Sau 60 ngày sử dụng, người dùng bẻ vụn khối nén trộn vào chậu cây để làm phân bón hữu cơ giàu nitơ, trả dưỡng chất về cho đất mẹ.
+            </p>
+            <div class="pt-2 text-[11px] font-bold text-[#2D5A27]" data-lang="proc_s4Stat">100% Phân bón hữu cơ</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: MARKET, USPs & GTM -->
+    <section id="market" class="py-20 bg-[#F5F2EA] border-t border-[#4A2E15]/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto space-y-3">
+          <span class="text-xs uppercase font-extrabold tracking-widest text-[#2D5A27]" data-lang="mkt_tag">Thị trường & Khách hàng Mục tiêu</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-[#3D2314] font-serif-display tracking-tight text-balance" data-lang="mkt_title">
+            Ai cần CoffBlock và Lợi thế Cạnh tranh Vượt trội?
+          </h2>
+          <p class="text-base text-[#4A2E15]/80" data-lang="mkt_subtitle">
+            Định vị sản phẩm thực tế, hướng đến người tiêu dùng hiện đại cần giải pháp an toàn và kinh tế.
+          </p>
+        </div>
+
+        <!-- 3 USPs -->
+        <div class="mt-14">
+          <h3 class="text-xl font-bold text-[#3D2314] mb-6 flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-[#2D5A27]"></span>
+            <span data-lang="mkt_uspHeader">3 Điểm Khác Biệt Cốt Lõi (Unique Selling Points)</span>
+          </h3>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="p-6 rounded-2xl bg-white border border-[#4A2E15]/10 shadow-sm flex flex-col justify-between">
+              <div>
+                <div class="text-2xl mb-3">🍃</div>
+                <h4 class="text-base font-bold text-[#3D2314] mb-2" data-lang="mkt_usp1Title">Khử mùi thật bằng hấp phụ</h4>
+                <p class="text-xs text-[#4A2E15]/80 leading-relaxed" data-lang="mkt_usp1Desc">
+                  Không tạo mùi thơm gắt lấn át, mà dùng cấu trúc vi mô hút sạch phân tử hôi, đem lại không gian thoáng sạch tự nhiên.
+                </p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-[#4A2E15]/10 text-[11px] font-semibold text-[#2D5A27]" data-lang="mkt_usp1Sub">✓ 0% Hương nhân tạo gây kích ứng</div>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-white border border-[#4A2E15]/10 shadow-sm flex flex-col justify-between">
+              <div>
+                <div class="text-2xl mb-3">🛡️</div>
+                <h4 class="text-base font-bold text-[#3D2314] mb-2" data-lang="mkt_usp2Title">100% Nguồn gốc Thực vật</h4>
+                <p class="text-xs text-[#4A2E15]/80 leading-relaxed" data-lang="mkt_usp2Desc">
+                  Sự kết hợp hoàn hảo giữa bã cà phê Việt Nam và tinh bột sắn thực vật, an toàn tuyệt đối khi để cạnh thức ăn và quần áo trẻ em.
+                </p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-[#4A2E15]/10 text-[11px] font-semibold text-[#2D5A27]" data-lang="mkt_usp2Sub">✓ Chuẩn an toàn cạnh thực phẩm tươi sống</div>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-white border border-[#4A2E15]/10 shadow-sm flex flex-col justify-between">
+              <div>
+                <div class="text-2xl mb-3">♻️</div>
+                <h4 class="text-base font-bold text-[#3D2314] mb-2" data-lang="mkt_usp3Title">Mô hình Kinh tế Tuần hoàn</h4>
+                <p class="text-xs text-[#4A2E15]/80 leading-relaxed" data-lang="mkt_usp3Desc">
+                  Rác thải của quán cà phê trở thành sản phẩm gia đình, và sản phẩm sau dùng trở thành dinh dưỡng nuôi cây xanh.
+                </p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-[#4A2E15]/10 text-[11px] font-semibold text-[#2D5A27]" data-lang="mkt_usp3Sub">✓ 100% Khép kín tuần hoàn làm phân compost</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 Personas -->
+        <div class="mt-16">
+          <h3 class="text-xl font-bold text-[#3D2314] mb-6 flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-[#3D2314]"></span>
+            <span data-lang="mkt_personaHeader">3 Nhóm Khách Hàng Mục Tiêu</span>
+          </h3>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="p-6 rounded-2xl bg-white border border-[#4A2E15]/10 shadow-sm">
+              <span class="text-[11px] font-mono font-bold text-[#2D5A27]">PERSONA 01</span>
+              <h4 class="text-base font-bold text-[#3D2314] mt-1 mb-2" data-lang="mkt_p1Title">Người nội trợ & Gia đình trẻ (22 - 45 tuổi)</h4>
+              <p class="text-xs text-[#4A2E15]/80 leading-relaxed mb-4" data-lang="mkt_p1Desc">
+                Ưu tiên hàng đầu về an toàn sức khỏe gia đình, lưu trữ nhiều thực phẩm tươi sống trong tủ lạnh và cần sản phẩm lành tính, không mùi nhân tạo.
+              </p>
+              <div class="p-3 rounded-xl bg-[#FDFBF7] border border-[#4A2E15]/10 text-[11px] text-[#4A2E15]/90">
+                <span class="font-bold text-[#3D2314] block" data-lang="mkt_p1Match">Sản phẩm phù hợp:</span>
+                Set Tủ Lạnh 79.000 VNĐ & Family Combo 159.000 VNĐ
+              </div>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-white border border-[#4A2E15]/10 shadow-sm">
+              <span class="text-[11px] font-mono font-bold text-[#2D5A27]">PERSONA 02</span>
+              <h4 class="text-base font-bold text-[#3D2314] mt-1 mb-2" data-lang="mkt_p2Title">Sinh viên & Người thuê trọ không gian nhỏ</h4>
+              <p class="text-xs text-[#4A2E15]/80 leading-relaxed mb-4" data-lang="mkt_p2Desc">
+                Sống tại phòng trọ, căn hộ studio thiếu ban công thông thoáng. Cần giải pháp nhỏ gọn, giá rẻ (dưới 100k) để hút ẩm tủ quần áo và khử mùi phòng.
+              </p>
+              <div class="p-3 rounded-xl bg-[#FDFBF7] border border-[#4A2E15]/10 text-[11px] text-[#4A2E15]/90">
+                <span class="font-bold text-[#3D2314] block" data-lang="mkt_p2Match">Sản phẩm phù hợp:</span>
+                Túi Vải Canvas Treo Tủ Áo 99.000 VNĐ (Set 3 túi)
+              </div>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-white border border-[#4A2E15]/10 shadow-sm">
+              <span class="text-[11px] font-mono font-bold text-[#2D5A27]">PERSONA 03</span>
+              <h4 class="text-base font-bold text-[#3D2314] mt-1 mb-2" data-lang="mkt_p3Title">Cộng đồng tiêu dùng Xanh & Nhạy cảm mùi</h4>
+              <p class="text-xs text-[#4A2E15]/80 leading-relaxed mb-4" data-lang="mkt_p3Desc">
+                Người có cơ địa dị ứng với hương liệu sáp thơm công nghiệp, ủng hộ các sáng kiến kinh tế tuần hoàn và chuộng lối sống không rác thải (zero-waste).
+              </p>
+              <div class="p-3 rounded-xl bg-[#FDFBF7] border border-[#4A2E15]/10 text-[11px] text-[#4A2E15]/90">
+                <span class="font-bold text-[#3D2314] block" data-lang="mkt_p3Match">Sản phẩm phù hợp:</span>
+                Family Combo & Tham gia chương trình "Đổi bã lấy quà"
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Marketing Strategy -->
+        <div class="mt-16 p-8 rounded-2xl bg-white border border-[#4A2E15]/15 shadow-sm">
+          <div class="mb-6">
+            <span class="text-xs font-extrabold uppercase tracking-wider text-[#2D5A27]" data-lang="mkt_stratTag">Chiến lược tăng trưởng</span>
+            <h3 class="text-xl sm:text-2xl font-bold text-[#3D2314]" data-lang="mkt_stratTitle">Chiến Lược Tiếp Thị & Phân Phối (Go-To-Market)</h3>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="p-5 rounded-xl bg-[#FDFBF7] border border-[#4A2E15]/10 space-y-2">
+              <div class="text-xl">📹</div>
+              <h4 class="text-sm font-bold text-[#3D2314]" data-lang="mkt_s1Title">Viral Video & Thử thách thực tế (TikTok/Reels)</h4>
+              <p class="text-xs text-[#4A2E15]/80 leading-relaxed" data-lang="mkt_s1Desc">
+                Video trực quan kiểm chứng độ hút mùi giữa tủ lạnh có CoffBlock và tủ lạnh thông thường khi để cá tươi và sầu riêng.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-xl bg-[#FDFBF7] border border-[#4A2E15]/10 space-y-2">
+              <div class="text-xl">🤝</div>
+              <h4 class="text-sm font-bold text-[#3D2314]" data-lang="mkt_s2Title">Đối tác Sáng tạo Sống xanh (KOLs/KOCs)</h4>
+              <p class="text-xs text-[#4A2E15]/80 leading-relaxed" data-lang="mkt_s2Desc">
+                Đồng hành cùng các Content Creator về phong cách sống tối giản, chăm sóc nhà cửa và các hội nhóm sinh viên.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-xl bg-[#FDFBF7] border border-[#4A2E15]/10 space-y-2">
+              <div class="text-xl">🏪</div>
+              <h4 class="text-sm font-bold text-[#3D2314]" data-lang="mkt_s3Title">Điểm bán tại Chuỗi Quán Cà phê & Siêu thị</h4>
+              <p class="text-xs text-[#4A2E15]/80 leading-relaxed" data-lang="mkt_s3Desc">
+                Trưng bày ngay tại quầy thanh toán của các quán cà phê đối tác thu gom bã, siêu thị tiện lợi và sàn thương mại điện tử.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: LIVE ANONYMOUS Q&A HUB -->
+    <section id="qa" class="py-20 bg-[#FDFBF7] scroll-mt-20 border-t border-[#4A2E15]/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto space-y-3">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#2D5A27]/10 text-[#2D5A27] text-xs font-bold">
+            <span class="w-2 h-2 rounded-full bg-[#2D5A27] animate-ping"></span>
+            <span data-lang="qa_tag">Hệ thống Q&A Ẩn Danh Trực Tiếp</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-[#3D2314] font-serif-display tracking-tight" data-lang="qa_title">
+            Hỏi đáp Trực tiếp cùng Diễn giả (Live Anonymous Q&A)
+          </h2>
+          <p class="text-base text-[#4A2E15]/80" data-lang="qa_subtitle">
+            Khán giả không cần đăng nhập. Hãy quét mã QR hoặc nhập câu hỏi trực tiếp bên dưới!
+          </p>
+          <div class="pt-1 flex items-center justify-center gap-2 text-[11px] text-[#4A2E15]/60 font-mono">
+            <span id="connDot" class="w-2 h-2 rounded-full bg-[#2D5A27]"></span>
+            <span id="connText">Firestore Database Connected</span>
+          </div>
+        </div>
+
+        <!-- QR Code Presentation Card -->
+        <div class="mt-10 max-w-2xl mx-auto p-6 rounded-2xl bg-white border border-[#4A2E15]/15 shadow-sm flex flex-col sm:flex-row items-center gap-6">
+          <div class="relative group p-2 bg-[#FDFBF7] rounded-xl border border-[#4A2E15]/10 shadow-sm shrink-0">
+            <img id="qrImg" src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https%3A%2F%2Fcoffblock.web.app%2F%23qa&color=3D2314&bgcolor=FDFBF7" alt="CoffBlock QR Code" class="w-32 h-32 object-contain rounded-lg">
+          </div>
+          <div class="space-y-3 text-center sm:text-left flex-1">
+            <div class="inline-flex items-center gap-1.5 text-xs font-bold text-[#2D5A27]">
+              <span>📱</span>
+              <span data-lang="qa_scanPhone">Quét QR trên điện thoại</span>
+            </div>
+            <p class="text-xs text-[#4A2E15]/80" data-lang="qa_scanDesc">
+              Khán giả quét mã để vào thẳng trang gửi câu hỏi ẩn danh và upvote mà không cần đăng nhập hay tải app.
+            </p>
+            <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2 pt-1">
+              <button id="btnEnlargeQr" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold text-[#3D2314] bg-[#F5F2EA] hover:bg-[#EAE4D6] border border-[#4A2E15]/10 cursor-pointer">
+                <span>⛶</span>
+                <span data-lang="qa_projectorBtn">Chiếu Slide Pitch</span>
+              </button>
+              <button id="btnCopyLink" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold text-[#2D5A27] bg-[#2D5A27]/10 hover:bg-[#2D5A27]/20 border border-[#2D5A27]/20 cursor-pointer">
+                <span>📋</span>
+                <span id="copyLinkText" data-lang="qa_copyLink">Copy Link Q&A</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mode Toggle & Counters Strip -->
+        <div class="mt-12 flex flex-col sm:flex-row items-center justify-between gap-4 border-b border-[#4A2E15]/10 pb-6">
+          <div class="flex items-center bg-[#4A2E15]/8 p-1.5 rounded-xl border border-[#4A2E15]/10 w-full sm:w-auto">
+            <button id="tabAudience" class="flex-1 sm:flex-none px-4 py-2 text-xs font-bold rounded-lg transition-all bg-white text-[#3D2314] shadow-sm cursor-pointer" data-lang="qa_tabAudience">
+              Góc Khán Giả (Đặt câu hỏi & Bình chọn)
+            </button>
+            <button id="tabSpeaker" class="flex-1 sm:flex-none px-4 py-2 text-xs font-bold rounded-lg transition-all text-[#4A2E15]/70 hover:text-[#3D2314] cursor-pointer" data-lang="qa_tabSpeaker">
+              Góc Diễn Giả (Điều hành & Trả lời)
+            </button>
+          </div>
+
+          <div class="flex items-center gap-4 text-xs font-medium text-[#4A2E15]/80">
+            <div><span id="countQuestions" class="font-bold text-[#3D2314] font-mono">0</span> <span data-lang="qa_statQuestions">Câu hỏi</span></div>
+            <span class="text-[#4A2E15]/20">|</span>
+            <div><span id="countUpvotes" class="font-bold text-[#2D5A27] font-mono">0</span> <span data-lang="qa_statUpvotes">Lượt bình chọn</span></div>
+            <span class="text-[#4A2E15]/20">|</span>
+            <div><span id="countAnswered" class="font-bold text-[#4E7C59] font-mono">0</span> <span data-lang="qa_statAnswered">Đã giải đáp</span></div>
+          </div>
+        </div>
+
+        <!-- Q&A Main Interface -->
+        <div class="mt-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- Left Column: Audience Form OR Speaker Console -->
+          <div class="lg:col-span-5 space-y-6">
+            
+            <!-- Audience Form -->
+            <div id="audienceFormCard" class="bg-white rounded-2xl p-6 border border-[#4A2E15]/15 shadow-sm">
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="text-base font-bold text-[#3D2314] flex items-center gap-2">
+                  <span>💬</span>
+                  <span data-lang="qa_askTitle">Gửi câu hỏi ẩn danh</span>
+                </h3>
+                <button id="btnShuffleNick" type="button" class="text-xs text-[#2D5A27] hover:underline flex items-center gap-1 font-medium cursor-pointer">
+                  <span>🔄</span>
+                  <span data-lang="qa_randomizeNick">Đổi tên ngẫu nhiên</span>
+                </button>
+              </div>
+
+              <form id="questionForm" class="space-y-4">
+                <div>
+                  <label class="block text-xs font-semibold text-[#4A2E15]/75 mb-1" data-lang="qa_nameLabel">Tên hiển thị (ẩn danh):</label>
+                  <input type="text" id="inputAuthor" class="w-full px-3.5 py-2 rounded-xl text-xs bg-[#FDFBF7] border border-[#4A2E15]/15 focus:outline-none focus:ring-2 focus:ring-[#2D5A27] text-[#3D2314] font-medium" value="Khán giả ẩn danh #28">
+                </div>
+
+                <div>
+                  <label class="block text-xs font-semibold text-[#4A2E15]/75 mb-1" data-lang="qa_contentLabel">Nội dung câu hỏi:</label>
+                  <textarea id="inputContent" rows="3" required maxlength="300" placeholder="Nhập câu hỏi của bạn cho nhóm thuyết trình CoffBlock..." class="w-full px-3.5 py-2.5 rounded-xl text-xs bg-[#FDFBF7] border border-[#4A2E15]/15 focus:outline-none focus:ring-2 focus:ring-[#2D5A27] text-[#3D2314] placeholder-[#4A2E15]/40 resize-none"></textarea>
+                  <div class="flex justify-between items-center text-[10px] text-[#4A2E15]/50 mt-1">
+                    <span data-lang="qa_noLoginNotice">Không cần đăng nhập tài khoản</span>
+                    <span id="charCount" class="font-mono">0/300</span>
+                  </div>
+                </div>
+
+                <div>
+                  <label class="block text-xs font-semibold text-[#4A2E15]/75 mb-1.5" data-lang="qa_tagLabel">Chọn chủ đề:</label>
+                  <div class="grid grid-cols-2 gap-2" id="tagButtonGrid">
+                    <button type="button" data-tag="product" class="tag-select-btn px-3 py-1.5 rounded-lg text-xs font-medium border text-left bg-[#2D5A27] text-white border-[#2D5A27] cursor-pointer" data-lang="qa_tagProduct">Sản phẩm</button>
+                    <button type="button" data-tag="pricing" class="tag-select-btn px-3 py-1.5 rounded-lg text-xs font-medium border text-left bg-[#FDFBF7] text-[#4A2E15] border-[#4A2E15]/15 cursor-pointer" data-lang="qa_tagPricing">Giá bán & Thị trường</button>
+                    <button type="button" data-tag="process" class="tag-select-btn px-3 py-1.5 rounded-lg text-xs font-medium border text-left bg-[#FDFBF7] text-[#4A2E15] border-[#4A2E15]/15 cursor-pointer" data-lang="qa_tagProcess">Quy trình & Kỹ thuật</button>
+                    <button type="button" data-tag="environment" class="tag-select-btn px-3 py-1.5 rounded-lg text-xs font-medium border text-left bg-[#FDFBF7] text-[#4A2E15] border-[#4A2E15]/15 cursor-pointer" data-lang="qa_tagEnv">Môi trường & Tuần hoàn</button>
+                  </div>
+                </div>
+
+                <button type="submit" id="btnSubmitQuestion" class="w-full py-3 px-4 rounded-xl text-xs font-bold text-white bg-[#2D5A27] hover:bg-[#23471f] transition-all duration-200 cursor-pointer flex items-center justify-center gap-2 shadow-sm">
+                  <span>📨</span>
+                  <span data-lang="qa_submitBtn">Gửi câu hỏi ẩn danh</span>
+                </button>
+              </form>
+            </div>
+
+            <!-- Speaker Console (Hidden by default, shown on Speaker tab) -->
+            <div id="speakerConsoleCard" class="hidden bg-[#3D2314] text-white rounded-2xl p-6 shadow-md space-y-4">
+              <div class="flex items-center gap-2 text-[#86efac] text-xs font-bold">
+                <span>🛡️</span>
+                <span data-lang="qa_speakerConsoleTitle">Bảng Điều Hành Diễn Giả Pitch Deck</span>
+              </div>
+              <h3 class="text-xl font-bold font-serif-display text-[#FDFBF7]" data-lang="qa_speakerConsoleHeading">
+                Quản lý Câu hỏi Sân khấu
+              </h3>
+              <p class="text-xs text-white/80 leading-relaxed" data-lang="qa_speakerConsoleDesc">
+                Bạn đang ở chế độ Diễn giả: Ghim câu hỏi quan trọng để thảo luận trên màn hình, đánh dấu câu hỏi đã giải đáp, hoặc nhập câu trả lời trực tiếp cho khán giả theo dõi.
+              </p>
+
+              <div>
+                <label class="block text-xs font-semibold text-white/80 mb-1" data-lang="qa_speakerNameLabel">Diễn giả đang phản hồi:</label>
+                <select id="selectSpeaker" class="w-full px-3 py-2 rounded-xl text-xs bg-white/10 border border-white/20 text-white focus:outline-none">
+                  <option value="Trọng Dương (R&D & Process)" class="text-black">Trọng Dương (R&D & Process)</option>
+                  <option value="Thu Hà (Introduction)" class="text-black">Thu Hà (Introduction)</option>
+                  <option value="Lương Hạo (Coffee Waste)" class="text-black">Lương Hạo (Coffee Waste)</option>
+                  <option value="Phan Vũ Duy (Household Problem)" class="text-black">Phan Vũ Duy (Household Problem)</option>
+                  <option value="Trịnh Dũng (USPs & Customers)" class="text-black">Trịnh Dũng (USPs & Customers)</option>
+                  <option value="Nguyễn Minh Hoàng (Marketing)" class="text-black">Nguyễn Minh Hoàng (Marketing)</option>
+                  <option value="Đào Đức Duy (Conclusion & Q&A)" class="text-black">Đào Đức Duy (Conclusion & Q&A)</option>
+                </select>
+              </div>
+
+              <div class="pt-2">
+                <button type="button" id="btnClearAllQuestions" class="w-full py-2 px-3 text-xs font-semibold text-rose-300 hover:text-white bg-rose-950/40 hover:bg-rose-900/60 rounded-xl border border-rose-800/40 transition-colors flex items-center justify-center gap-1.5 cursor-pointer">
+                  <span>🗑️</span>
+                  <span data-lang="qa_clearAllBtn">Làm mới / Xóa tất cả câu hỏi</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Filter Bar & Questions Feed -->
+          <div class="lg:col-span-7 space-y-4">
+            
+            <div class="bg-white p-3.5 rounded-2xl border border-[#4A2E15]/15 shadow-sm space-y-3">
+              <input type="text" id="inputSearch" placeholder="Tìm câu hỏi theo từ khóa hoặc người gửi..." class="w-full px-3 py-2 text-xs rounded-xl bg-[#FDFBF7] border border-[#4A2E15]/10 focus:outline-none focus:ring-1 focus:ring-[#2D5A27]">
+              
+              <div class="flex flex-wrap items-center gap-1.5 pt-1" id="filterTagContainer">
+                <button data-filter="all" class="filter-btn px-3 py-1 rounded-lg text-xs font-medium bg-[#3D2314] text-white cursor-pointer" data-lang="qa_filterAll">Tất cả câu hỏi</button>
+                <button data-filter="product" class="filter-btn px-3 py-1 rounded-lg text-xs font-medium bg-[#FDFBF7] text-[#4A2E15]/80 hover:bg-[#F5F2EA] cursor-pointer" data-lang="qa_tagProduct">Sản phẩm</button>
+                <button data-filter="pricing" class="filter-btn px-3 py-1 rounded-lg text-xs font-medium bg-[#FDFBF7] text-[#4A2E15]/80 hover:bg-[#F5F2EA] cursor-pointer" data-lang="qa_tagPricing">Giá bán & Thị trường</button>
+                <button data-filter="process" class="filter-btn px-3 py-1 rounded-lg text-xs font-medium bg-[#FDFBF7] text-[#4A2E15]/80 hover:bg-[#F5F2EA] cursor-pointer" data-lang="qa_tagProcess">Quy trình & Kỹ thuật</button>
+                <button data-filter="environment" class="filter-btn px-3 py-1 rounded-lg text-xs font-medium bg-[#FDFBF7] text-[#4A2E15]/80 hover:bg-[#F5F2EA] cursor-pointer" data-lang="qa_tagEnv">Môi trường & Tuần hoàn</button>
+              </div>
+            </div>
+
+            <!-- Questions Container -->
+            <div id="questionsList" class="space-y-3">
+              <!-- Dynamically populated or empty state -->
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#3D2314] text-[#FDFBF7] pt-16 pb-12 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-white/10">
+        <div class="md:col-span-5 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-xl bg-[#2D5A27] flex items-center justify-center text-white">
+              🌱
+            </div>
+            <span class="text-2xl font-extrabold tracking-tight text-[#FDFBF7]">
+              Coff<span class="text-[#86efac]">Block</span>
+            </span>
+          </div>
+          <p class="text-xs text-white/75 leading-relaxed max-w-sm" data-lang="footer_desc">
+            CoffBlock — Dự án kiểm soát mùi sinh thái tiên phong từ bã cà phê và tinh bột sắn Việt Nam.
+          </p>
+          <p class="text-xs italic text-[#86efac] font-serif-display">
+            "From coffee grounds to better living — Giving waste a second chance."
+          </p>
+          <div class="pt-2">
+            <button onclick="downloadStandaloneHtml()" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-bold text-white bg-white/10 hover:bg-white/20 border border-white/20 transition-colors cursor-pointer">
+              <span>💾</span>
+              <span data-lang="footer_exportHtml">Tải trang web đơn tệp (.HTML)</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="md:col-span-3 space-y-3">
+          <h4 class="text-xs uppercase font-extrabold tracking-wider text-[#86efac]" data-lang="footer_colProducts">Sản phẩm & Giải pháp</h4>
+          <ul class="space-y-2 text-xs text-white/70">
+            <li><a href="#products" class="hover:text-white transition-colors" data-lang="footer_prod1">Set Tủ Lạnh (79.000 VNĐ)</a></li>
+            <li><a href="#products" class="hover:text-white transition-colors" data-lang="footer_prod2">Set Tủ Áo & Phòng Tắm (99.000 VNĐ)</a></li>
+            <li><a href="#products" class="hover:text-white transition-colors" data-lang="footer_prod3">Family Combo Toàn Diện</a></li>
+            <li><a href="#process" class="hover:text-white transition-colors" data-lang="footer_prod4">Quy trình sản xuất tuần hoàn</a></li>
+          </ul>
+        </div>
+
+        <div class="md:col-span-4 space-y-3">
+          <h4 class="text-xs uppercase font-extrabold tracking-wider text-[#86efac]" data-lang="footer_colPitch">Pitch Deck & Tương Tác</h4>
+          <p class="text-xs text-white/70 leading-relaxed" data-lang="footer_pitchTeam">
+            Dự án nghiên cứu & thương mại hóa bởi CoffBlock Team. 100% Khép kín kinh tế tuần hoàn và thân thiện môi trường sống.
+          </p>
+          <div class="pt-2 flex flex-wrap gap-2">
+            <a href="#tech" class="px-3 py-1.5 rounded-lg text-xs font-bold text-[#3D2314] bg-[#86efac] hover:bg-[#6ee7b7]" data-lang="footer_btnTech">
+              Tìm hiểu Công nghệ Vi xốp
+            </a>
+            <a href="#qa" class="px-3 py-1.5 rounded-lg text-xs font-bold text-white bg-white/10 hover:bg-white/20 border border-white/20" data-lang="footer_btnQa">
+              Tham gia Live Q&A
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/60">
+        <p data-lang="footer_rights">Bản quyền © 2026 CoffBlock Team. Pitch Deck Presentation.</p>
+        <button onclick="window.scrollTo({top:0, behavior:'smooth'})" class="flex items-center gap-1.5 text-white/70 hover:text-white transition-colors cursor-pointer">
+          <span>↑</span>
+          <span data-lang="footer_top">Lên đầu trang</span>
+        </button>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- FULLSCREEN QR PROJECTOR MODAL -->
+  <div id="qrModal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="bg-[#FDFBF7] max-w-lg w-full rounded-3xl p-8 shadow-2xl border border-[#4A2E15]/20 relative text-center">
+      <button id="btnCloseQrModal" class="absolute top-5 right-5 p-2 rounded-full text-[#4A2E15]/70 hover:text-[#3D2314] cursor-pointer">✕</button>
+      <span class="text-xs font-extrabold uppercase tracking-widest text-[#2D5A27]">CoffBlock · Pitch Deck Live Q&A</span>
+      <h3 class="text-2xl font-extrabold text-[#3D2314] mt-2 mb-1" data-lang="modal_qrTitle">Quét Mã Để Đặt Câu Hỏi</h3>
+      <p class="text-xs text-[#4A2E15]/75 mb-6" data-lang="modal_qrDesc">Không cần tạo tài khoản hay đăng nhập</p>
+      <div class="bg-white p-6 rounded-2xl border border-[#4A2E15]/15 inline-block shadow-inner mb-6">
+        <img id="modalQrImg" src="https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=https%3A%2F%2Fcoffblock.web.app%2F%23qa&color=3D2314&bgcolor=FFFFFF" alt="Full QR Code" class="w-64 h-64 sm:w-72 sm:h-72 object-contain mx-auto">
+      </div>
+      <div class="flex items-center justify-center gap-3">
+        <button id="btnModalCopyLink" class="px-5 py-2.5 rounded-xl text-xs font-bold text-white bg-[#2D5A27] hover:bg-[#23471f] cursor-pointer">Sao chép link</button>
+        <button id="btnModalClose" class="px-5 py-2.5 rounded-xl text-xs font-bold text-[#3D2314] bg-[#F5F2EA] cursor-pointer">Đóng</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ORDER TOAST NOTIFICATION -->
+  <div id="orderToast" class="hidden fixed bottom-6 right-6 z-50 max-w-sm p-4 rounded-xl bg-[#2D5A27] text-white shadow-2xl flex items-center justify-between gap-3 animate-bounce">
+    <div>
+      <span id="toastItemName" class="font-bold text-xs block">Set Tủ Lạnh</span>
+      <span class="text-[11px] text-white/80" data-lang="toast_msg">Đã ghi nhận yêu cầu mẫu thử Pitch Deck!</span>
+    </div>
+    <button onclick="document.getElementById('orderToast').classList.add('hidden')" class="text-white/80 hover:text-white text-xs underline cursor-pointer">✕</button>
+  </div>
+
+  <!-- JAVASCRIPT: BILINGUAL ENGINE & FIREBASE FIRESTORE SYNC -->
+  <script type="module">
+    import { initializeApp, getApps } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+    import { 
+      getFirestore, 
+      collection, 
+      onSnapshot, 
+      addDoc, 
+      updateDoc, 
+      deleteDoc, 
+      doc, 
+      serverTimestamp,
+      query,
+      orderBy,
+      increment 
+    } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+
+    // 1. FIREBASE CONFIGURATION (Using user's provided Firebase Project)
+    const firebaseConfig = {
+      apiKey: "AIzaSyDlawEAgGDEsz9hgFcmujHmVFOkGby3Ugw",
+      authDomain: "coffblock.firebaseapp.com",
+      databaseURL: "https://coffblock-default-rtdb.asia-southeast1.firebasedatabase.app",
+      projectId: "coffblock",
+      storageBucket: "coffblock.firebasestorage.app",
+      messagingSenderId: "664196442054",
+      appId: "1:664196442054:web:d664cb7835fda422b374c7",
+      measurementId: "G-G719W906WX"
+    };
+
+    let db = null;
+    try {
+      const app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0];
+      db = getFirestore(app);
+    } catch (e) {
+      console.warn('Firebase init warning:', e);
+    }
+
+    // 2. BILINGUAL DICTIONARY
+    const DICT = {
+      vi: {
+        nav_products: "Sản phẩm",
+        nav_story: "Bài toán & Bối cảnh",
+        nav_tech: "Công nghệ Vi xốp",
+        nav_process: "Quy trình Tuần hoàn",
+        nav_market: "Khách hàng & Chiến lược",
+        nav_qa: "Live Q&A Trực tiếp",
+        nav_askButton: "Đặt câu hỏi Live",
+
+        hero_badge: "Sản phẩm Đột phá Sinh thái 2026",
+        hero_headline: "Biến bã cà phê thành không gian sống xanh & sạch mùi",
+        hero_subheadline: "Giải pháp kiểm soát mùi sinh thái tự nhiên cho tủ lạnh và tủ quần áo từ 100% bã cà phê tái chế tại Việt Nam kết hợp tinh bột sắn thực vật an toàn.",
+        hero_ctaPrimary: "Khám phá Sản phẩm",
+        hero_ctaSecondary: "Gửi câu hỏi Q&A Live",
+        hero_safe: "An toàn thực phẩm",
+        hero_circular: "Kinh tế tuần hoàn",
+        hero_duration: "Tác dụng 60 ngày",
+        hero_stat1: "100% Sinh học",
+        hero_stat1Desc: "Tái chế bã cà phê & sắn",
+        hero_stat2: "0% Hương liệu",
+        hero_stat2Desc: "Không hoá chất nhân tạo",
+        hero_stat3: "60 Ngày",
+        hero_stat3Desc: "Hiệu quả hút mùi bền bỉ",
+        hero_stat4: "1.000.000+ Tấn",
+        hero_stat4Desc: "Tiềm năng bã cà phê VN",
+
+        story_tag: "Thực trạng & Bối cảnh",
+        story_title: "Từ rác thải chôn lấp đến không gian sống trong lành",
+        story_subtitle: "Kết nối hai bài toán nhức nhối quen thuộc của đời sống thành một chu trình tuần hoàn giá trị cao.",
+        story_coffeeTitle: "Văn hóa cà phê Việt Nam & Áp lực rác thải",
+        story_coffeeDesc: "Cà phê là thức uống gắn liền với nhịp sống của hàng chục triệu người Việt Nam mỗi sáng. Tuy nhiên, hàng ngàn tấn bã cà phê qua sử dụng bị vứt thẳng ra bãi rác sinh hoạt mỗi ngày, phân hủy yếm khí sinh khí methane (CH₄) gây biến đổi khí hậu.",
+        story_wasteYearly: "Bã cà phê xả bãi rác mỗi năm",
+        story_methaneDesc: "Khí nhà kính hại gấp 28x CO₂",
+        story_houseTitle: "Nỗi ám ảnh mùi hôi trong từng căn nhà",
+        story_houseDesc: "Tủ lạnh gia đình thường xuyên bị ám mùi chéo giữa hải sản tanh, hành tỏi và đồ ăn thừa. Tủ quần áo bị nồm ẩm, mốc meo trong mùa mưa gió kéo dài. Các căn phòng trọ sinh viên chật hẹp thiếu thông gió khiến không khí ngột ngạt.",
+        story_fridgeCloset: "Tủ lạnh & Tủ áo",
+        story_fridgeDesc: "Ám mùi tanh & nồm ẩm mốc",
+        story_dorm: "Phòng trọ hẹp",
+        story_dormDesc: "Thiếu thông gió tự nhiên",
+        story_compTag: "Phân tích đối sánh",
+        story_compTitle: "So sánh giải pháp: CoffBlock vs Sáp thơm nhân tạo",
+        story_compSubtitle: "Giải quyết tận gốc rễ vấn đề",
+        story_thCriteria: "Tiêu chí",
+        story_thCoffBlock: "CoffBlock (Sinh thái)",
+        story_thChemical: "Sáp thơm / Xịt phòng hoá học",
+        story_crit1: "Cơ chế xử lý",
+        story_coff1: "✓ Hấp phụ vật lý vi xốp, triệt tiêu phân tử mùi tận gốc",
+        story_chem1: "✗ Tỏa hương nồng để át mùi, không xử lý phân tử hôi",
+        story_crit2: "Thành phần & Độ an toàn",
+        story_coff2: "✓ 100% Bã cà phê sạch & Tinh bột sắn thực vật, an toàn cạnh thực phẩm",
+        story_chem2: "✗ Hương liệu tổng hợp nhân tạo, VOCs, tiềm ẩn kích ứng hô hấp",
+        story_crit3: "Vòng đời sau sử dụng",
+        story_coff3: "✓ 100% Phân hủy sinh học, bẻ vụn làm phân compost cho cây cảnh",
+        story_chem3: "✗ Hộp nhựa sử dụng một lần và cặn sáp thải ra môi trường",
+
+        tech_tag: "Cơ chế & Công nghệ",
+        tech_title: "Khoa học đằng sau cấu trúc vi xốp tự nhiên của CoffBlock",
+        tech_subtitle: "Tận dụng cấu trúc vật lý mao dẫn siêu nhỏ của bã cà phê kết hợp tinh bột sắn biến tính làm chất kết dính an toàn.",
+        tech_microscope: "Vật lý Mao dẫn Vi mô",
+        tech_matrixTitle: "Mạng lưới mao quản vi xốp (Porous Matrix)",
+        tech_matrixDesc: "Sau quá trình xử lý nhiệt đối lưu, bã cà phê sở hữu diện tích bề mặt tiếp xúc lên đến 15-20 m²/g. Mạng lưới lỗ xốp li ti hoạt động như bẫy vật lý hút giữ các hợp chất dễ bay hơi như Trimethylamine (mùi tanh cá) và Dimethyl disulfide (mùi hành tỏi nồng).",
+        tech_trapTitle: "Cơ chế bẫy phân tử mùi:",
+        tech_tmaDesc: "Mùi tanh cá & hải sản bị giữ chặt trong lỗ rỗng trung bình (mesopores).",
+        tech_dmdsDesc: "Hợp chất sulfur từ hành tỏi nồng bị trung hòa bề mặt mao dẫn.",
+        tech_spec1: "Diện tích bề mặt",
+        tech_spec2: "Độ ẩm sản phẩm",
+        tech_spec3: "Ủ Compost đất",
+        tech_binderBadge: "Chất kết dính sinh học 100%",
+        tech_binderTitle: "Chất kết dính tinh bột sắn thực vật",
+        tech_binderDesc: "Thay vì dùng keo hóa học, CoffBlock sử dụng tinh bột sắn (cassava starch) quen thuộc của nông nghiệp Việt Nam, giúp khối nén có độ bền cơ học cao, không bị rã vỡ trong môi trường độ ẩm 85% của tủ lạnh, đồng thời đạt chuẩn an toàn khi tiếp xúc gần thực phẩm.",
+        tech_feature1Title: "Chịu ẩm vượt trội 85%",
+        tech_feature1Desc: "Không nhão, không bở rã khi đặt trực tiếp cạnh đá lạnh hay ngăn đông.",
+        tech_feature2Title: "An toàn cạnh thực phẩm tươi",
+        tech_feature2Desc: "100% tinh bột củ sắn nông nghiệp Việt Nam, không chứa formaldehyd hay keo công nghiệp.",
+        tech_rdTeam: "Công thức phát triển bởi R&D Team",
+
+        prod_tag: "Dòng sản phẩm & Giá bán",
+        prod_title: "Giải pháp sinh thái cho từng không gian sống",
+        prod_subtitle: "Định giá minh bạch, tiết kiệm và thân thiện với ngân sách gia đình cũng như sinh viên.",
+        prod_set1Badge: "Bán chạy nhất",
+        prod_set1Spec: "2 Khối nén đúc nguyên khối",
+        prod_set1Name: "Set Tủ Lạnh (Refrigerator Set)",
+        prod_set1Desc: "Khối nén đúc từ bã cà phê tinh khiết kết dính tinh bột sắn. Đặt trực tiếp lên khay tủ lạnh, ngăn mát hoặc ngăn đông để triệt tiêu mùi tanh cá, hành tỏi, sầu riêng.",
+        prod_currency: "VNĐ",
+        prod_set1F1: "2 khối nén đúc chuyên dụng",
+        prod_set1F2: "Hiệu quả khử mùi 60 ngày liên tục",
+        prod_set1F3: "100% an toàn cạnh thực phẩm tươi sống",
+        prod_set1F4: "Dễ dàng ủ đất bón cây sau dùng",
+        prod_orderBtn: "Đặt trải nghiệm thử",
+        prod_set2Badge: "Được yêu thích",
+        prod_set2Spec: "3 Túi vải canvas treo chống ẩm mốc",
+        prod_set2Name: "Set Tủ Áo & Phòng Tắm (Wardrobe Set)",
+        prod_set2Desc: "Bã cà phê sấy hạt trong túi canvas dệt tự nhiên có dây treo tiện lợi. Hút ẩm mùa nồm, ngăn nấm mốc tủ quần áo và khử mùi hôi giày dép.",
+        prod_set2F1: "3 túi canvas dệt thủ công có móc treo",
+        prod_set2F2: "Chống ẩm mốc và hút mùi ẩm mốc",
+        prod_set2F3: "Thích hợp tủ quần áo, phòng tắm, xe hơi",
+        prod_set2F4: "Vải canvas bền đẹp tái sử dụng",
+        prod_set3Badge: "Tiết kiệm nhất",
+        prod_set3Spec: "Trọn bộ 2 Khối nén + 3 Túi canvas",
+        prod_set3Name: "Family Combo (Bộ Toàn Diện)",
+        prod_set3Desc: "Giải pháp toàn diện cho toàn bộ ngôi nhà: 2 khối nén khử mùi tủ lạnh và 3 túi canvas treo tủ quần áo, phòng tắm. Đóng gói trong hộp quà kraft sinh thái.",
+        prod_set3F1: "Tiết kiệm ngay 19.000 VNĐ so với mua lẻ",
+        prod_set3F2: "Đầy đủ cho bếp, tủ lạnh, tủ áo và phòng tắm",
+        prod_set3F3: "Hộp quà Kraft sang trọng, thân thiện môi trường",
+        prod_set3F4: "Tặng kèm sổ tay hướng dẫn ủ phân compost",
+        prod_orderFamily: "Đặt Combo Toàn Diện",
+        promo_title: "Ưu đãi đặc biệt dịp ra mắt",
+        promo_subtitle: "Chương trình trợ giá kích cầu xanh",
+        promo_1: "Mua 2 set tủ lạnh nhận ngay 1 túi treo canvas.",
+        promo_2: "Mang bã cà phê đã sấy khô đến sự kiện để đổi 1 khối CoffBlock miễn phí.",
+
+        proc_tag: "Quy trình Sản xuất Tuần hoàn",
+        proc_title: "Hành trình khép kín: Từ tách cà phê đến hạt giống mới",
+        proc_subtitle: "Quy trình 4 bước tinh gọn đảm bảo vệ sinh, chất lượng ổn định và không phát sinh rác thải.",
+        proc_s1Title: "1. Thu gom bã cà phê",
+        proc_s1Desc: "Hợp tác thu gom bã cà phê sạch hàng ngày từ các quán cà phê hè phố và chuỗi đối tác, tạo nguồn nguyên liệu ổn định và giảm tải bãi rác.",
+        proc_s1Stat: "Giảm 100% rác chôn lấp",
+        proc_s2Title: "2. Sấy khô & Phối trộn",
+        proc_s2Desc: "Sấy đối lưu nhiệt độ kiểm soát để khử ẩm dưới 8% và loại bỏ vi sinh, sau đó phối trộn với tinh bột sắn biến tính tự nhiên làm chất kết dính sinh học.",
+        proc_s2Stat: "Độ ẩm < 8% chống mốc",
+        proc_s3Title: "3. Đúc khuôn & Đóng gói",
+        proc_s3Desc: "Ép thủy lực thành các khối nén hình học hoặc đóng gói vào túi vải canvas dệt tự nhiên, kiểm định độ an toàn thực phẩm trước khi xuất xưởng.",
+        proc_s3Stat: "Chuẩn an toàn thực phẩm",
+        proc_s4Title: "4. Hoàn nguyên Compost",
+        proc_s4Desc: "Sau 60 ngày sử dụng, người dùng bẻ vụn khối nén trộn vào chậu cây để làm phân bón hữu cơ giàu nitơ, trả dưỡng chất về cho đất mẹ.",
+        proc_s4Stat: "100% Phân bón hữu cơ",
+
+        mkt_tag: "Thị trường & Khách hàng Mục tiêu",
+        mkt_title: "Ai cần CoffBlock và Lợi thế Cạnh tranh Vượt trội?",
+        mkt_subtitle: "Định vị sản phẩm thực tế, hướng đến người tiêu dùng hiện đại cần giải pháp an toàn và kinh tế.",
+        mkt_uspHeader: "3 Điểm Khác Biệt Cốt Lõi (Unique Selling Points)",
+        mkt_usp1Title: "Khử mùi thật bằng hấp phụ",
+        mkt_usp1Desc: "Không tạo mùi thơm gắt lấn át, mà dùng cấu trúc vi mô hút sạch phân tử hôi, đem lại không gian thoáng sạch tự nhiên.",
+        mkt_usp1Sub: "✓ 0% Hương nhân tạo gây kích ứng",
+        mkt_usp2Title: "100% Nguồn gốc Thực vật",
+        mkt_usp2Desc: "Sự kết hợp hoàn hảo giữa bã cà phê Việt Nam và tinh bột sắn thực vật, an toàn tuyệt đối khi để cạnh thức ăn và quần áo trẻ em.",
+        mkt_usp2Sub: "✓ Chuẩn an toàn cạnh thực phẩm tươi sống",
+        mkt_usp3Title: "Mô hình Kinh tế Tuần hoàn",
+        mkt_usp3Desc: "Rác thải của quán cà phê trở thành sản phẩm gia đình, và sản phẩm sau dùng trở thành dinh dưỡng nuôi cây xanh.",
+        mkt_usp3Sub: "✓ 100% Khép kín tuần hoàn làm phân compost",
+        mkt_personaHeader: "3 Nhóm Khách Hàng Mục Tiêu",
+        mkt_p1Title: "Người nội trợ & Gia đình trẻ (22 - 45 tuổi)",
+        mkt_p1Desc: "Ưu tiên hàng đầu về an toàn sức khỏe gia đình, lưu trữ nhiều thực phẩm tươi sống trong tủ lạnh và cần sản phẩm lành tính, không mùi nhân tạo.",
+        mkt_p1Match: "Sản phẩm phù hợp:",
+        mkt_p2Title: "Sinh viên & Người thuê trọ không gian nhỏ",
+        mkt_p2Desc: "Sống tại phòng trọ, căn hộ studio thiếu ban công thông thoáng. Cần giải pháp nhỏ gọn, giá rẻ (dưới 100k) để hút ẩm tủ quần áo và khử mùi phòng.",
+        mkt_p2Match: "Sản phẩm phù hợp:",
+        mkt_p3Title: "Cộng đồng tiêu dùng Xanh & Nhạy cảm mùi",
+        mkt_p3Desc: "Người có cơ địa dị ứng với hương liệu sáp thơm công nghiệp, ủng hộ các sáng kiến kinh tế tuần hoàn và chuộng lối sống không rác thải (zero-waste).",
+        mkt_p3Match: "Sản phẩm phù hợp:",
+        mkt_stratTag: "Chiến lược tăng trưởng",
+        mkt_stratTitle: "Chiến Lược Tiếp Thị & Phân Phối (Go-To-Market)",
+        mkt_s1Title: "Viral Video & Thử thách thực tế (TikTok/Reels)",
+        mkt_s1Desc: "Video trực quan kiểm chứng độ hút mùi giữa tủ lạnh có CoffBlock và tủ lạnh thông thường khi để cá tươi và sầu riêng.",
+        mkt_s2Title: "Đối tác Sáng tạo Sống xanh (KOLs/KOCs)",
+        mkt_s2Desc: "Đồng hành cùng các Content Creator về phong cách sống tối giản, chăm sóc nhà cửa và các hội nhóm sinh viên.",
+        mkt_s3Title: "Điểm bán tại Chuỗi Quán Cà phê & Siêu thị",
+        mkt_s3Desc: "Trưng bày ngay tại quầy thanh toán của các quán cà phê đối tác thu gom bã, siêu thị tiện lợi và sàn thương mại điện tử.",
+
+        qa_tag: "Hệ thống Q&A Ẩn Danh Trực Tiếp",
+        qa_title: "Hỏi đáp Trực tiếp cùng Diễn giả (Live Anonymous Q&A)",
+        qa_subtitle: "Khán giả không cần đăng nhập. Hãy quét mã QR hoặc nhập câu hỏi trực tiếp bên dưới!",
+        qa_scanPhone: "Quét QR trên điện thoại",
+        qa_scanDesc: "Khán giả quét mã để vào thẳng trang gửi câu hỏi ẩn danh và upvote mà không cần đăng nhập hay tải app.",
+        qa_projectorBtn: "Chiếu Slide Pitch",
+        qa_copyLink: "Copy Link Q&A",
+        qa_tabAudience: "Góc Khán Giả (Đặt câu hỏi & Bình chọn)",
+        qa_tabSpeaker: "Góc Diễn Giả (Điều hành & Trả lời)",
+        qa_statQuestions: "Câu hỏi",
+        qa_statUpvotes: "Lượt bình chọn",
+        qa_statAnswered: "Đã giải đáp",
+        qa_askTitle: "Gửi câu hỏi ẩn danh",
+        qa_randomizeNick: "Đổi tên ngẫu nhiên",
+        qa_nameLabel: "Tên hiển thị (ẩn danh):",
+        qa_contentLabel: "Nội dung câu hỏi:",
+        qa_noLoginNotice: "Không cần đăng nhập tài khoản",
+        qa_tagLabel: "Chọn chủ đề:",
+        qa_tagProduct: "Sản phẩm",
+        qa_tagPricing: "Giá bán & Thị trường",
+        qa_tagProcess: "Quy trình & Kỹ thuật",
+        qa_tagEnv: "Môi trường & Tuần hoàn",
+        qa_submitBtn: "Gửi câu hỏi ẩn danh",
+        qa_speakerConsoleTitle: "Bảng Điều Hành Diễn Giả Pitch Deck",
+        qa_speakerConsoleHeading: "Quản lý Câu hỏi Sân khấu",
+        qa_speakerConsoleDesc: "Bạn đang ở chế độ Diễn giả: Ghim câu hỏi quan trọng để thảo luận trên màn hình, đánh dấu câu hỏi đã giải đáp, hoặc nhập câu trả lời trực tiếp cho khán giả theo dõi.",
+        qa_speakerNameLabel: "Diễn giả đang phản hồi:",
+        qa_clearAllBtn: "Làm mới / Xóa tất cả câu hỏi",
+        qa_filterAll: "Tất cả câu hỏi",
+
+        footer_desc: "CoffBlock — Dự án kiểm soát mùi sinh thái tiên phong từ bã cà phê và tinh bột sắn Việt Nam.",
+        footer_exportHtml: "Tải trang web đơn tệp (.HTML)",
+        footer_colProducts: "Sản phẩm & Giải pháp",
+        footer_prod1: "Set Tủ Lạnh (79.000 VNĐ)",
+        footer_prod2: "Set Tủ Áo & Phòng Tắm (99.000 VNĐ)",
+        footer_prod3: "Family Combo Toàn Diện",
+        footer_prod4: "Quy trình sản xuất tuần hoàn",
+        footer_colPitch: "Pitch Deck & Tương Tác",
+        footer_pitchTeam: "Dự án nghiên cứu & thương mại hóa bởi CoffBlock Team. 100% Khép kín kinh tế tuần hoàn và thân thiện môi trường sống.",
+        footer_btnTech: "Tìm hiểu Công nghệ Vi xốp",
+        footer_btnQa: "Tham gia Live Q&A",
+        footer_rights: "Bản quyền © 2026 CoffBlock Team. Pitch Deck Presentation.",
+        footer_top: "Lên đầu trang",
+
+        modal_qrTitle: "Quét Mã Để Đặt Câu Hỏi",
+        modal_qrDesc: "Không cần tạo tài khoản hay đăng nhập",
+        toast_msg: "Đã ghi nhận yêu cầu mẫu thử Pitch Deck!"
+      },
+      en: {
+        nav_products: "Products",
+        nav_story: "Story & Context",
+        nav_tech: "Porous Tech",
+        nav_process: "Circular Process",
+        nav_market: "Market & Strategy",
+        nav_qa: "Live Q&A Hub",
+        nav_askButton: "Ask Live Q&A",
+
+        hero_badge: "Eco-Innovation Showcase 2026",
+        hero_headline: "From coffee grounds to better living — Giving waste a second chance",
+        hero_subheadline: "Natural eco-friendly odor control for refrigerators and wardrobes from 100% recycled Vietnamese coffee grounds and food-safe cassava starch.",
+        hero_ctaPrimary: "Explore Products",
+        hero_ctaSecondary: "Join Live Q&A",
+        hero_safe: "Food-grade safe",
+        hero_circular: "Circular economy",
+        hero_duration: "60-day longevity",
+        hero_stat1: "100% Bio-based",
+        hero_stat1Desc: "Coffee grounds & cassava",
+        hero_stat2: "0% Fragrance",
+        hero_stat2Desc: "No synthetic chemicals",
+        hero_stat3: "60 Days",
+        hero_stat3Desc: "Continuous adsorption",
+        hero_stat4: "1M+ Tons",
+        hero_stat4Desc: "Vietnam coffee waste potential",
+
+        story_tag: "Problem & Context",
+        story_title: "From landfill waste to a breathable living space",
+        story_subtitle: "Connecting two everyday real-world challenges into one high-value circular lifecycle.",
+        story_coffeeTitle: "Vietnam Coffee Culture & Landfill Burden",
+        story_coffeeDesc: "Coffee is an essential daily ritual for tens of millions of Vietnamese people. However, massive volumes of spent coffee grounds are dumped into municipal landfills each day, decomposing anaerobically to emit harmful methane (CH₄) gas.",
+        story_wasteYearly: "Coffee grounds dumped yearly",
+        story_methaneDesc: "Potent greenhouse gas 28x vs CO₂",
+        story_houseTitle: "The Everyday Struggle with Indoor Odors",
+        story_houseDesc: "Home refrigerators constantly trap conflicting odors from raw seafood, fish, onions, and leftovers. Wardrobes turn damp and musty during high humidity and rainy seasons. Small student rooms and rental studios suffer from restricted airflow.",
+        story_fridgeCloset: "Fridge & Wardrobes",
+        story_fridgeDesc: "Fish odors & rainy mildew",
+        story_dorm: "Compact Rentals",
+        story_dormDesc: "Restricted natural airflow",
+        story_compTag: "Comparative Analysis",
+        story_compTitle: "Direct Comparison: CoffBlock vs Chemical Fresheners",
+        story_compSubtitle: "Eliminating odor at the source",
+        story_thCriteria: "Criteria",
+        story_thCoffBlock: "CoffBlock (Eco Bio)",
+        story_thChemical: "Synthetic Air Fresheners",
+        story_crit1: "Mechanism",
+        story_coff1: "✓ Physical porous adsorption traps and removes odor molecules at the source",
+        story_chem1: "✗ Overpowers rooms with heavy perfume without eliminating odor molecules",
+        story_crit2: "Ingredients & Safety",
+        story_coff2: "✓ 100% Clean coffee grounds & cassava starch; safe beside groceries",
+        story_chem2: "✗ Synthetic VOCs, phthalates, and artificial chemicals prone to respiratory irritation",
+        story_crit3: "End-of-Life Lifecycle",
+        story_coff3: "✓ 100% Biodegradable; crumbles into nitrogen-rich compost for potted plants",
+        story_chem3: "✗ Single-use plastic containers and non-recyclable petroleum gel residues",
+
+        tech_tag: "Mechanism & Technology",
+        tech_title: "The Science Behind CoffBlock's Natural Porous Structure",
+        tech_subtitle: "Harnessing the micro-capillary physical structure of treated coffee grounds paired with plant-based cassava starch.",
+        tech_microscope: "Physical Capillary Adsorption",
+        tech_matrixTitle: "Micro-Porous Capillary Matrix",
+        tech_matrixDesc: "After controlled convective dehydration, dried coffee grounds exhibit a huge specific surface area of 15-20 m²/g. The microscopic cellular pores act as active physical traps capturing volatile organic compounds such as Trimethylamine (fish odor) and Dimethyl disulfide (pungent garlic/onion vapors).",
+        tech_trapTitle: "Odor Adsorption Trapping:",
+        tech_tmaDesc: "Fish & seafood amines trapped in internal mesopores.",
+        tech_dmdsDesc: "Pungent sulfur compounds from garlic & onions adsorbed.",
+        tech_spec1: "Surface Area",
+        tech_spec2: "Moisture Content",
+        tech_spec3: "Circularity",
+        tech_binderBadge: "100% Bio-Binder",
+        tech_binderTitle: "Natural Cassava Starch Binder",
+        tech_binderDesc: "Instead of synthetic chemical glues, CoffBlock incorporates native Vietnamese cassava starch. This provides mechanical durability that prevents crumbly degradation in 85% refrigerator humidity while remaining 100% food-grade safe.",
+        tech_feature1Title: "High Humidity Resistance",
+        tech_feature1Desc: "Maintains structural integrity in high-moisture refrigerator environments.",
+        tech_feature2Title: "Food-Safe Standard",
+        tech_feature2Desc: "Native Vietnamese cassava starch with zero industrial glues or chemical plasticizers.",
+        tech_rdTeam: "Developed by CoffBlock R&D",
+
+        prod_tag: "Products & Pricing",
+        prod_title: "Eco solutions for every living space",
+        prod_subtitle: "Transparent, affordable pricing tailored for households and young renters alike.",
+        prod_set1Badge: "Best Seller",
+        prod_set1Spec: "2 Solid molded compressed blocks",
+        prod_set1Name: "Refrigerator Block Set",
+        prod_set1Desc: "Precision molded from pure recycled coffee grounds and cassava binder. Placed directly on refrigerator shelves or freezers to eliminate fish, garlic, and leftover odors.",
+        prod_currency: "VND",
+        prod_set1F1: "2 molded solid blocks",
+        prod_set1F2: "60 days of continuous odor control",
+        prod_set1F3: "100% food-safe near groceries",
+        prod_set1F4: "Easily crumbled for garden compost",
+        prod_orderBtn: "Request Trial Set",
+        prod_set2Badge: "Crowd Favorite",
+        prod_set2Spec: "3 Breathable canvas hanging pouches",
+        prod_set2Name: "Wardrobe & Bathroom Set",
+        prod_set2Desc: "Fine coffee grounds sealed inside natural woven canvas pouches with hanging cotton loops. Absorbs humidity, prevents wardrobe mildew, and freshens shoe racks.",
+        prod_set2F1: "3 handcrafted canvas pouches with loops",
+        prod_set2F2: "Moisture and mustiness control",
+        prod_set2F3: "Ideal for wardrobes, bathrooms, cars",
+        prod_set2F4: "Durable reusable canvas fabric",
+        prod_set3Badge: "Best Value",
+        prod_set3Spec: "Full set: 2 Molded blocks + 3 Canvas pouches",
+        prod_set3Name: "Family Combo Set",
+        prod_set3Desc: "Complete household deodorizing solution: 2 refrigerator blocks and 3 hanging canvas pouches packaged in a premium recyclable craft paper gift box.",
+        prod_set3F1: "Save 19,000 VND compared to individual items",
+        prod_set3F2: "Full coverage for kitchen, fridge, closets & bathrooms",
+        prod_set3F3: "Eco-luxe craft paper packaging",
+        prod_set3F4: "Includes home composting guide booklet",
+        prod_orderFamily: "Order Family Combo",
+        promo_title: "Exclusive Launch Promotions",
+        promo_subtitle: "Eco Incentive Launch Programs",
+        promo_1: "Buy 2 refrigerator sets, get 1 wardrobe canvas pouch free.",
+        promo_2: "Bring properly dried coffee grounds to our pop-up booth to receive 1 complimentary CoffBlock block.",
+
+        proc_tag: "4-Step Circular Process",
+        proc_title: "A closed-loop journey: From morning coffee to green soil",
+        proc_subtitle: "A streamlined 4-step production model prioritizing hygiene, stability, and zero waste.",
+        proc_s1Title: "1. Coffee Grounds Collection",
+        proc_s1Desc: "Partnering with local coffee shops to collect fresh grounds daily, establishing a dependable raw material supply while diverting waste from landfills.",
+        proc_s1Stat: "Zero Landfill Diverted",
+        proc_s2Title: "2. Purifying, Drying & Blending",
+        proc_s2Desc: "Convective heat drying to below 8% moisture to prevent mold, then blending with natural cassava starch as an organic, food-safe binder.",
+        proc_s2Stat: "Moisture < 8% Anti-Mold",
+        proc_s3Title: "3. Mold Compression & Packaging",
+        proc_s3Desc: "Hydraulic compression into solid blocks or packaging into natural canvas hanging pouches, followed by strict food hygiene quality checks.",
+        proc_s3Stat: "Food-Grade Certified",
+        proc_s4Title: "4. Soil Composting & Circularity",
+        proc_s4Desc: "After 60 days of odor absorption, the block is crumbled into potting soil as nitrogen-rich organic compost, returning vital nutrients to the earth.",
+        proc_s4Stat: "100% Bio Organic Soil",
+
+        mkt_tag: "Target Market & Strategy",
+        mkt_title: "Who Needs CoffBlock & What Sets It Apart?",
+        mkt_subtitle: "A practical market approach aimed at modern consumers seeking safe, affordable everyday solutions.",
+        mkt_uspHeader: "3 Core Unique Selling Points (USPs)",
+        mkt_usp1Title: "True Odor Adsorption",
+        mkt_usp1Desc: "Never masks smells with overpowering perfumes; physically traps and neutralizes smelly molecules for genuinely pure air.",
+        mkt_usp1Sub: "✓ 0% Synthetic irritating perfumes",
+        mkt_usp2Title: "100% Plant-Based & Food-Safe",
+        mkt_usp2Desc: "A safe combination of Vietnamese coffee grounds and cassava starch, certified safe for placement right beside food.",
+        mkt_usp2Sub: "✓ Food-grade safe beside raw groceries",
+        mkt_usp3Title: "Circular Economy in Action",
+        mkt_usp3Desc: "Cafe waste becomes household protection, and spent blocks enrich houseplant soil as organic plant food.",
+        mkt_usp3Sub: "✓ 100% Closed-loop garden composting",
+        mkt_personaHeader: "3 Target Customer Personas",
+        mkt_p1Title: "Household Managers & Homemakers (22 - 45)",
+        mkt_p1Desc: "Prioritize family health and food hygiene, store diverse groceries in refrigerators, and want completely fragrance-free solutions near fresh food.",
+        mkt_p1Match: "Recommended format:",
+        mkt_p2Title: "Students & Small Apartment Renters",
+        mkt_p2Desc: "Living in compact dorms or studios with poor ventilation. Need an affordable (<100k VND), compact fix for musty closets and confined rooms.",
+        mkt_p2Match: "Recommended format:",
+        mkt_p3Title: "Eco-Conscious & Fragrance-Sensitive Shoppers",
+        mkt_p3Desc: "Prone to headaches from artificial sprays, actively support circular economy initiatives, and embrace zero-waste lifestyle principles.",
+        mkt_p3Match: "Recommended format:",
+        mkt_stratTag: "Growth Strategy",
+        mkt_stratTitle: "Marketing & Distribution Strategy (Go-To-Market)",
+        mkt_s1Title: "Proof-Driven Social Media (TikTok & Reels)",
+        mkt_s1Desc: "Realistic side-by-side odor absorption demonstrations in refrigerators containing fresh fish, durian, and herbs.",
+        mkt_s2Title: "Eco-Living & Home Care Creator Partnerships",
+        mkt_s2Desc: "Collaborating with lifestyle creators, student influencers, and sustainable living communities.",
+        mkt_s3Title: "Cafe Checkout & Retail Distribution",
+        mkt_s3Desc: "Point-of-sale displays at partner coffee shops where raw grounds are sourced, plus local green grocers and supermarkets.",
+
+        qa_tag: "Live Anonymous Q&A Hub",
+        qa_title: "Interactive Live Q&A with the Pitch Team",
+        qa_subtitle: "No sign-in or account needed. Scan the QR code or submit your questions anonymously below!",
+        qa_scanPhone: "Scan via phone camera",
+        qa_scanDesc: "Audience can scan to directly submit anonymous questions and vote without any app install or login.",
+        qa_projectorBtn: "Full Screen Projector",
+        qa_copyLink: "Copy Q&A Link",
+        qa_tabAudience: "Audience View (Ask & Upvote)",
+        qa_tabSpeaker: "Speaker Dashboard (Manage & Reply)",
+        qa_statQuestions: "Questions",
+        qa_statUpvotes: "Total Upvotes",
+        qa_statAnswered: "Answered",
+        qa_askTitle: "Ask Anonymously",
+        qa_randomizeNick: "Randomize",
+        qa_nameLabel: "Display Nickname (Anonymous):",
+        qa_contentLabel: "Question details:",
+        qa_noLoginNotice: "No sign-in required",
+        qa_tagLabel: "Select topic:",
+        qa_tagProduct: "Product",
+        qa_tagPricing: "Pricing & Market",
+        qa_tagProcess: "Process & Tech",
+        qa_tagEnv: "Environment & Circularity",
+        qa_submitBtn: "Post Anonymous Question",
+        qa_speakerConsoleTitle: "Speaker Presentation Console",
+        qa_speakerConsoleHeading: "Stage Q&A Moderation",
+        qa_speakerConsoleDesc: "You are in Speaker Mode: Pin standout questions to the top, mark answered topics, or write direct responses viewable by the entire audience.",
+        qa_speakerNameLabel: "Current Answering Speaker:",
+        qa_clearAllBtn: "Clear All Questions",
+        qa_filterAll: "All Questions",
+
+        footer_desc: "CoffBlock — Pioneering eco-friendly odor control from recycled Vietnamese coffee grounds and cassava starch.",
+        footer_exportHtml: "Export Standalone Single HTML",
+        footer_colProducts: "Products & Solutions",
+        footer_prod1: "Refrigerator Set (79,000 VND)",
+        footer_prod2: "Wardrobe Canvas Set (99,000 VND)",
+        footer_prod3: "Family All-in-One Combo",
+        footer_prod4: "Circular 4-Step Process",
+        footer_colPitch: "Pitch Deck & Live Hub",
+        footer_pitchTeam: "Engineered and commercialized by CoffBlock Team. 100% closed-loop circular economy and clean living spaces.",
+        footer_btnTech: "Explore Porous Science",
+        footer_btnQa: "Join Live Q&A",
+        footer_rights: "Copyright © 2026 CoffBlock Team. Pitch Deck Presentation.",
+        footer_top: "Back to top",
+
+        modal_qrTitle: "Scan to Ask Anonymous Questions",
+        modal_qrDesc: "No account or app download required",
+        toast_msg: "Recorded demo request for Pitch Deck!"
+      }
+    };
+
+    // Current State
+    let currentLang = 'vi';
+    let isSpeakerMode = false;
+    let questions = [];
+    let selectedTag = 'product';
+    let filterTag = 'all';
+    let searchQuery = '';
+    const likedIds = new Set(JSON.parse(localStorage.getItem('coffblock_user_liked') || '[]'));
+
+    // 3. LANGUAGE SWITCHER HANDLER
+    function applyLanguage(lang) {
+      currentLang = lang;
+      document.documentElement.lang = lang;
+
+      // Update navbar buttons
+      const btnVi = document.getElementById('btnLangVi');
+      const btnEn = document.getElementById('btnLangEn');
+      if (lang === 'vi') {
+        btnVi.className = "px-2.5 py-1 text-xs font-bold rounded-lg transition-all bg-[#3D2314] text-[#FDFBF7] shadow-sm cursor-pointer";
+        btnEn.className = "px-2.5 py-1 text-xs font-bold rounded-lg transition-all text-[#4A2E15]/70 hover:text-[#3D2314] cursor-pointer";
+      } else {
+        btnEn.className = "px-2.5 py-1 text-xs font-bold rounded-lg transition-all bg-[#3D2314] text-[#FDFBF7] shadow-sm cursor-pointer";
+        btnVi.className = "px-2.5 py-1 text-xs font-bold rounded-lg transition-all text-[#4A2E15]/70 hover:text-[#3D2314] cursor-pointer";
+      }
+
+      // Replace text elements with data-lang
+      const elements = document.querySelectorAll('[data-lang]');
+      elements.forEach(el => {
+        const key = el.getAttribute('data-lang');
+        if (DICT[lang] && DICT[lang][key]) {
+          el.textContent = DICT[lang][key];
+        }
+      });
+
+      renderQuestions();
+    }
+
+    document.getElementById('btnLangVi').addEventListener('click', () => applyLanguage('vi'));
+    document.getElementById('btnLangEn').addEventListener('click', () => applyLanguage('en'));
+
+    // Mobile menu toggle
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    });
+
+    // Randomize nickname generator
+    function generateNick(lang) {
+      const adjs = lang === 'vi' ? ['Ẩn danh', 'Thân thiện', 'Yêu cà phê', 'Yêu môi trường', 'Sáng tạo'] : ['Curious', 'Green', 'Coffee', 'Eco', 'Mindful'];
+      const nouns = lang === 'vi' ? ['Khán giả', 'Nhà đầu tư', 'Bạn trẻ', 'Người tiêu dùng'] : ['Guest', 'Investor', 'Audience', 'Citizen'];
+      const rand = Math.floor(100 + Math.random() * 900);
+      const a = adjs[Math.floor(Math.random() * adjs.length)];
+      const n = nouns[Math.floor(Math.random() * nouns.length)];
+      return `${n} ${a} #${rand}`;
+    }
+
+    document.getElementById('btnShuffleNick').addEventListener('click', () => {
+      document.getElementById('inputAuthor').value = generateNick(currentLang);
+    });
+
+    // Tag button selector
+    const tagBtns = document.querySelectorAll('.tag-select-btn');
+    tagBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        selectedTag = btn.getAttribute('data-tag');
+        tagBtns.forEach(b => {
+          if (b.getAttribute('data-tag') === selectedTag) {
+            b.className = "tag-select-btn px-3 py-1.5 rounded-lg text-xs font-medium border text-left bg-[#2D5A27] text-white border-[#2D5A27] cursor-pointer";
+          } else {
+            b.className = "tag-select-btn px-3 py-1.5 rounded-lg text-xs font-medium border text-left bg-[#FDFBF7] text-[#4A2E15] border-[#4A2E15]/15 cursor-pointer";
+          }
+        });
+      });
+    });
+
+    // Character counter
+    const inputContent = document.getElementById('inputContent');
+    const charCount = document.getElementById('charCount');
+    inputContent.addEventListener('input', () => {
+      charCount.textContent = `${inputContent.value.length}/300`;
+    });
+
+    // Filter Buttons
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterTag = btn.getAttribute('data-filter');
+        filterBtns.forEach(b => {
+          if (b.getAttribute('data-filter') === filterTag) {
+            b.className = "filter-btn px-3 py-1 rounded-lg text-xs font-medium bg-[#3D2314] text-white cursor-pointer";
+          } else {
+            b.className = "filter-btn px-3 py-1 rounded-lg text-xs font-medium bg-[#FDFBF7] text-[#4A2E15]/80 hover:bg-[#F5F2EA] cursor-pointer";
+          }
+        });
+        renderQuestions();
+      });
+    });
+
+    // Search query
+    document.getElementById('inputSearch').addEventListener('input', (e) => {
+      searchQuery = e.target.value.toLowerCase();
+      renderQuestions();
+    });
+
+    // Mode Toggle: Audience vs Speaker
+    const tabAudience = document.getElementById('tabAudience');
+    const tabSpeaker = document.getElementById('tabSpeaker');
+    const audienceFormCard = document.getElementById('audienceFormCard');
+    const speakerConsoleCard = document.getElementById('speakerConsoleCard');
+
+    tabAudience.addEventListener('click', () => {
+      isSpeakerMode = false;
+      tabAudience.className = "flex-1 sm:flex-none px-4 py-2 text-xs font-bold rounded-lg transition-all bg-white text-[#3D2314] shadow-sm cursor-pointer";
+      tabSpeaker.className = "flex-1 sm:flex-none px-4 py-2 text-xs font-bold rounded-lg transition-all text-[#4A2E15]/70 hover:text-[#3D2314] cursor-pointer";
+      audienceFormCard.classList.remove('hidden');
+      speakerConsoleCard.classList.add('hidden');
+      renderQuestions();
+    });
+
+    tabSpeaker.addEventListener('click', () => {
+      isSpeakerMode = true;
+      tabSpeaker.className = "flex-1 sm:flex-none px-4 py-2 text-xs font-bold rounded-lg transition-all bg-[#3D2314] text-white shadow-sm cursor-pointer";
+      tabAudience.className = "flex-1 sm:flex-none px-4 py-2 text-xs font-bold rounded-lg transition-all text-[#4A2E15]/70 hover:text-[#3D2314] cursor-pointer";
+      audienceFormCard.classList.add('hidden');
+      speakerConsoleCard.classList.remove('hidden');
+      renderQuestions();
+    });
+
+    // 4. QUESTIONS RENDERING LOGIC (NO SAMPLE SEED QUESTIONS)
+    function renderQuestions() {
+      const container = document.getElementById('questionsList');
+      const filtered = questions.filter(q => {
+        const matchesTag = filterTag === 'all' || q.tag === filterTag;
+        const matchesSearch = !searchQuery || 
+          q.content.toLowerCase().includes(searchQuery) ||
+          q.author.toLowerCase().includes(searchQuery);
+        return matchesTag && matchesSearch;
+      }).sort((a, b) => {
+        if (a.isPinned && !b.isPinned) return -1;
+        if (!a.isPinned && b.isPinned) return 1;
+        if (!a.isAnswered && b.isAnswered) return -1;
+        if (a.isAnswered && !b.isAnswered) return 1;
+        if (b.likes !== a.likes) return b.likes - a.likes;
+        return (b.createdAt || 0) - (a.createdAt || 0);
+      });
+
+      // Update counters
+      document.getElementById('countQuestions').textContent = questions.length;
+      document.getElementById('countUpvotes').textContent = questions.reduce((acc, q) => acc + (q.likes || 0), 0);
+      document.getElementById('countAnswered').textContent = questions.filter(q => q.isAnswered).length;
+
+      if (filtered.length === 0) {
+        container.innerHTML = `
+          <div class="p-12 text-center rounded-2xl bg-white border border-[#4A2E15]/10 text-xs text-[#4A2E15]/60">
+            <p>${currentLang === 'vi' ? 'Chưa có câu hỏi nào. Hãy là người đầu tiên đặt câu hỏi!' : 'No questions yet. Be the first to ask!'}</p>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = filtered.map(q => {
+        const isLiked = likedIds.has(q.id);
+        const tagLabel = {
+          product: currentLang === 'vi' ? 'Sản phẩm' : 'Product',
+          pricing: currentLang === 'vi' ? 'Giá bán' : 'Pricing',
+          process: currentLang === 'vi' ? 'Quy trình' : 'Process',
+          environment: currentLang === 'vi' ? 'Môi trường' : 'Environment',
+          other: currentLang === 'vi' ? 'Khác' : 'Other'
+        }[q.tag] || q.tag;
+
+        return `
+          <div class="p-5 rounded-2xl bg-white border transition-all duration-200 ${q.isPinned ? 'border-2 border-[#2D5A27] shadow-md bg-[#FAFBF8]' : 'border-[#4A2E15]/15 shadow-sm'}">
+            <div class="flex items-center justify-between gap-3 mb-2">
+              <div class="flex items-center gap-2 text-xs">
+                <span class="font-bold text-[#3D2314]">${escapeHtml(q.author)}</span>
+                <span class="text-[#4A2E15]/30">·</span>
+                <span class="text-[11px] font-semibold text-[#4E7C59] uppercase">${tagLabel}</span>
+              </div>
+              <div class="flex items-center gap-2">
+                ${q.isPinned ? '<span class="inline-flex items-center gap-1 text-[11px] font-bold text-[#2D5A27] bg-[#2D5A27]/10 px-2 py-0.5 rounded-md">📌 ' + (currentLang === 'vi' ? 'Đang ghim' : 'Pinned') + '</span>' : ''}
+                ${q.isAnswered ? '<span class="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-md">✓ ' + (currentLang === 'vi' ? 'Đã giải đáp' : 'Answered') + '</span>' : ''}
+              </div>
+            </div>
+
+            <p class="text-sm font-medium text-[#222222] leading-relaxed mb-4">${escapeHtml(q.content)}</p>
+
+            ${q.isAnswered && q.answer ? `
+              <div class="mt-3 p-4 rounded-xl bg-[#F5F2EA] border-l-4 border-[#2D5A27] text-xs space-y-1 mb-4">
+                <div class="flex items-center justify-between text-[#2D5A27] font-bold text-[11px]">
+                  <span>👤 ${escapeHtml(q.answeredBy || 'Diễn giả CoffBlock')}</span>
+                  <span class="text-[#4A2E15]/60 font-normal">${currentLang === 'vi' ? 'Đã giải đáp' : 'Answered'}</span>
+                </div>
+                <p class="text-[#3D2314] leading-relaxed">${escapeHtml(q.answer)}</p>
+              </div>
+            ` : ''}
+
+            <div class="flex items-center justify-between gap-4 pt-3 border-t border-[#4A2E15]/10">
+              <button onclick="window.upvoteQuestion('${q.id}')" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-all duration-200 cursor-pointer ${isLiked ? 'bg-[#fef2f2] text-rose-600 border border-rose-200' : 'bg-[#FDFBF7] text-[#4A2E15]/75 border border-[#4A2E15]/15 hover:border-rose-300 hover:text-rose-600'}">
+                <span>${isLiked ? '❤️' : '🤍'}</span>
+                <span class="font-mono tabular-nums">${q.likes || 0}</span>
+                <span class="hidden sm:inline font-normal text-[11px]">${currentLang === 'vi' ? 'Bình chọn hay' : 'Upvote'}</span>
+              </button>
+
+              ${isSpeakerMode ? `
+                <div class="flex items-center gap-1.5 text-xs">
+                  <button onclick="window.togglePinQuestion('${q.id}', ${!q.isPinned})" class="p-1.5 rounded-lg border text-xs font-medium cursor-pointer transition-colors ${q.isPinned ? 'bg-[#2D5A27] text-white border-[#2D5A27]' : 'bg-[#FDFBF7] text-[#4A2E15] border-[#4A2E15]/15'}">
+                    ${q.isPinned ? 'Bỏ ghim' : '📌 Ghim'}
+                  </button>
+                  <button onclick="window.promptAnswerQuestion('${q.id}')" class="px-2.5 py-1.5 rounded-lg bg-[#2D5A27]/10 hover:bg-[#2D5A27]/20 text-[#2D5A27] font-bold text-xs cursor-pointer border border-[#2D5A27]/20">
+                    Trả lời
+                  </button>
+                  <button onclick="window.deleteQuestion('${q.id}')" class="p-1.5 rounded-lg text-rose-600 hover:bg-rose-50 border border-transparent hover:border-rose-200 cursor-pointer">
+                    🗑️
+                  </button>
+                </div>
+              ` : ''}
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
+
+    // 5. FIRESTORE REAL-TIME LISTENER & SYNC
+    const STORAGE_KEY = 'coffblock_live_clean_v3';
+
+    function loadLocalQuestions() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) return [];
+        const parsed = JSON.parse(raw);
+        return Array.isArray(parsed) ? parsed.filter(q => !q.id?.startsWith('seed-')) : [];
+      } catch {
+        return [];
+      }
+    }
+
+    function saveLocalQuestions(items) {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
+      } catch {}
+    }
+
+    questions = loadLocalQuestions();
+    renderQuestions();
+
+    if (db) {
+      try {
+        const qRef = collection(db, 'coffblock_questions');
+        const qQuery = query(qRef, orderBy('createdAt', 'desc'));
+        onSnapshot(qQuery, (snapshot) => {
+          if (!snapshot.empty) {
+            const remote = snapshot.docs.map(docSnap => {
+              const d = docSnap.data();
+              return {
+                id: docSnap.id,
+                author: d.author || 'Anonymous',
+                content: d.content || '',
+                tag: d.tag || 'product',
+                likes: Number(d.likes) || 0,
+                isPinned: Boolean(d.isPinned),
+                isAnswered: Boolean(d.isAnswered),
+                answer: d.answer || '',
+                answeredBy: d.answeredBy || '',
+                createdAt: d.createdAt?.toMillis ? d.createdAt.toMillis() : Date.now()
+              };
+            }).filter(q => !q.id?.startsWith('seed-') && q.content && q.content.trim().length > 0);
+            questions = remote;
+            saveLocalQuestions(remote);
+          }
+          renderQuestions();
+          document.getElementById('connDot').className = 'w-2 h-2 rounded-full bg-[#2D5A27]';
+          document.getElementById('connText').textContent = 'Firestore Database Connected';
+        }, (err) => {
+          console.warn('Firestore fallback to local sync:', err);
+          document.getElementById('connDot').className = 'w-2 h-2 rounded-full bg-amber-500';
+          document.getElementById('connText').textContent = 'Local Real-time Mode';
+        });
+      } catch (err) {
+        console.warn('Firestore error:', err);
+      }
+    }
+
+    // 6. QUESTION FORM SUBMIT
+    document.getElementById('questionForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const author = document.getElementById('inputAuthor').value.trim() || 'Khán giả ẩn danh';
+      const content = document.getElementById('inputContent').value.trim();
+      if (!content) return;
+
+      const newQ = {
+        id: 'q_' + Date.now() + '_' + Math.random().toString(36).substring(2, 6),
+        author,
+        content,
+        tag: selectedTag,
+        likes: 0,
+        isPinned: false,
+        isAnswered: false,
+        createdAt: Date.now()
+      };
+
+      // Optimistic local update
+      questions = [newQ, ...questions];
+      saveLocalQuestions(questions);
+      renderQuestions();
+      document.getElementById('inputContent').value = '';
+      charCount.textContent = '0/300';
+
+      try {
+        if (typeof confetti === 'function') {
+          confetti({ particleCount: 30, spread: 50, origin: { y: 0.8 } });
+        }
+      } catch {}
+
+      // Write to Firestore in background
+      if (db) {
+        try {
+          const docRef = await addDoc(collection(db, 'coffblock_questions'), {
+            author: newQ.author,
+            content: newQ.content,
+            tag: newQ.tag,
+            likes: 0,
+            isPinned: false,
+            isAnswered: false,
+            createdAt: serverTimestamp()
+          });
+          newQ.id = docRef.id;
+        } catch (e) {
+          console.warn('Firestore write fallback:', e);
+        }
+      }
+    });
+
+    // Upvote Window Function
+    window.upvoteQuestion = async function(qId) {
+      const isLiked = likedIds.has(qId);
+      const delta = isLiked ? -1 : 1;
+
+      if (isLiked) {
+        likedIds.delete(qId);
+      } else {
+        likedIds.add(qId);
+        try {
+          if (typeof confetti === 'function') confetti({ particleCount: 15, spread: 40 });
+        } catch {}
+      }
+      localStorage.setItem('coffblock_user_liked', JSON.stringify(Array.from(likedIds)));
+
+      questions = questions.map(q => {
+        if (q.id === qId) {
+          return { ...q, likes: Math.max(0, (q.likes || 0) + delta) };
+        }
+        return q;
+      });
+      saveLocalQuestions(questions);
+      renderQuestions();
+
+      if (db) {
+        try {
+          await updateDoc(doc(db, 'coffblock_questions', qId), { likes: increment(delta) });
+        } catch {}
+      }
+    };
+
+    // Speaker Actions
+    window.togglePinQuestion = async function(qId, pinState) {
+      questions = questions.map(q => q.id === qId ? { ...q, isPinned: pinState } : q);
+      saveLocalQuestions(questions);
+      renderQuestions();
+      if (db) {
+        try {
+          await updateDoc(doc(db, 'coffblock_questions', qId), { isPinned: pinState });
+        } catch {}
+      }
+    };
+
+    window.promptAnswerQuestion = async function(qId) {
+      const ans = prompt(currentLang === 'vi' ? 'Nhập câu trả lời trực tiếp của diễn giả:' : 'Type speaker answer:');
+      if (!ans || !ans.trim()) return;
+
+      const speakerName = document.getElementById('selectSpeaker').value || 'Diễn giả CoffBlock';
+      questions = questions.map(q => q.id === qId ? { ...q, isAnswered: true, answer: ans.trim(), answeredBy: speakerName } : q);
+      saveLocalQuestions(questions);
+      renderQuestions();
+
+      if (db) {
+        try {
+          await updateDoc(doc(db, 'coffblock_questions', qId), {
+            isAnswered: true,
+            answer: ans.trim(),
+            answeredBy: speakerName
+          });
+        } catch {}
+      }
+    };
+
+    window.deleteQuestion = async function(qId) {
+      if (!confirm(currentLang === 'vi' ? 'Bạn có chắc chắn muốn xóa câu hỏi này?' : 'Delete this question?')) return;
+      questions = questions.filter(q => q.id !== qId);
+      saveLocalQuestions(questions);
+      renderQuestions();
+      if (db) {
+        try {
+          await deleteDoc(doc(db, 'coffblock_questions', qId));
+        } catch {}
+      }
+    };
+
+    // Clear all questions
+    document.getElementById('btnClearAllQuestions').addEventListener('click', () => {
+      if (!confirm(currentLang === 'vi' ? 'Bạn có chắc muốn xóa tất cả câu hỏi để bắt đầu phiên mới?' : 'Clear all questions for a new session?')) return;
+      questions = [];
+      saveLocalQuestions([]);
+      renderQuestions();
+    });
+
+    // 7. QR MODAL & COPY LINK
+    const currentUrl = window.location.href.split('#')[0] + '#qa';
+    const qrApiUrl = `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent(currentUrl)}&color=3D2314&bgcolor=FDFBF7`;
+    document.getElementById('qrImg').src = qrApiUrl;
+    document.getElementById('modalQrImg').src = qrApiUrl;
+
+    const qrModal = document.getElementById('qrModal');
+    document.getElementById('btnEnlargeQr').addEventListener('click', () => qrModal.classList.remove('hidden'));
+    document.getElementById('btnCloseQrModal').addEventListener('click', () => qrModal.classList.add('hidden'));
+    document.getElementById('btnModalClose').addEventListener('click', () => qrModal.classList.add('hidden'));
+
+    function copyLink() {
+      navigator.clipboard.writeText(currentUrl);
+      const textSpan = document.getElementById('copyLinkText');
+      textSpan.textContent = currentLang === 'vi' ? 'Đã copy link!' : 'Copied!';
+      setTimeout(() => {
+        textSpan.textContent = currentLang === 'vi' ? 'Copy Link Q&A' : 'Copy Link';
+      }, 2000);
+    }
+    document.getElementById('btnCopyLink').addEventListener('click', copyLink);
+    document.getElementById('btnModalCopyLink').addEventListener('click', copyLink);
+
+    // Preorder Toast
+    window.triggerPreorderToast = function(item) {
+      document.getElementById('toastItemName').textContent = item;
+      const toast = document.getElementById('orderToast');
+      toast.classList.remove('hidden');
+      try {
+        if (typeof confetti === 'function') confetti({ particleCount: 35, spread: 60 });
+      } catch {}
+      setTimeout(() => toast.classList.add('hidden'), 4000);
+    };
+
+    // Standalone HTML Download
+    window.downloadStandaloneHtml = function() {
+      const html = document.documentElement.outerHTML;
+      const blob = new Blob([html], { type: 'text/html;charset=utf-8' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'CoffBlock_PitchDeck_Standalone.html';
+      a.click();
+    };
+  </script>
+
+</body>
+</html>
